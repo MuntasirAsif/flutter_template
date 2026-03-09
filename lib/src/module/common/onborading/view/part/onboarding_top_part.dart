@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vezy/src/module/common/onborading/model/onboarding_model.dart';
 
+import '../../model/onboarding_model.dart';
 import '../../view_model/onboarding_view_model.dart';
 
 import 'language_selection_part.dart';

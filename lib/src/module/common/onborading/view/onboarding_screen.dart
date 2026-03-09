@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:vezy/core/static/theme/src/theme_extensions/extensions.dart';
-import 'package:vezy/core/static/theme/theme.dart';
-
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vezy/core/static/extensions/localization_extension.dart';
-import 'package:vezy/src/module/common/onborading/view/part/language_selection_part.dart';
 
 import '../../../../../core/routes/route_const.dart';
+import '../../../../../core/static/extensions/localization_extension.dart';
+import '../../../../../core/static/theme/src/theme_extensions/src/dimensions.dart';
+import '../../../../../core/static/theme/theme.dart';
 import '../view_model/onboarding_view_model.dart';
+import 'part/language_selection_part.dart';
 import 'part/onboarding_bottom_part.dart';
 import 'part/onboarding_top_part.dart';
 

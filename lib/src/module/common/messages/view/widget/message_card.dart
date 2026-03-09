@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vezy/core/static/theme/src/theme_extensions/src/dimensions.dart';
 
+import '../../../../../../core/static/theme/src/theme_extensions/src/dimensions.dart';
 import '../../../../../../core/static/theme/theme.dart';
 
 class MessageCard extends StatelessWidget {

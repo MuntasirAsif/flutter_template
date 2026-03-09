@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vezy/core/static/extensions/localization_extension.dart';
 import '../../../../../core/static/const/app_images.dart';
+import '../../../../../core/static/extensions/localization_extension.dart';
 
 class OnboardingModel {
   final String image;

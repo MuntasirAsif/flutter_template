@@ -1,8 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter_riverpod/legacy.dart';
-import 'package:vezy/core/service/cache/cache_service.dart';
 
+import '../../../../../core/service/cache/cache_service.dart';
 import '../../bottom_nav_bar/view/bottom_nav_bar.dart';
 
 final userRoleProvider = StateNotifierProvider<UserRoleNotifier, UserRole?>((

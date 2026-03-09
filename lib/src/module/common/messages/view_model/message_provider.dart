@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/legacy.dart';
-import 'package:vezy/src/module/common/messages/model/message_model.dart';
+
+import '../model/message_model.dart';
 
 class MessageProvider extends ChangeNotifier {
   MessageProvider() {

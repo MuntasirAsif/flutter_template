@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:vezy/core/static/theme/src/theme_extensions/extensions.dart';
-import 'package:vezy/core/static/theme/theme.dart';
 
 import '../../../../../core/routes/route_const.dart';
+import '../../../../../core/static/theme/src/theme_extensions/src/dimensions.dart';
+import '../../../../../core/static/theme/theme.dart';
 
 class MessageListScreen extends StatelessWidget {
   const MessageListScreen({super.key});

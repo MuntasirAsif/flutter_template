@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vezy/core/static/extensions/localization_extension.dart';
-import 'package:vezy/src/module/common/authentication/view/sign_up/part/service_provider_form.dart';
+import '../../../../../../../core/static/extensions/localization_extension.dart';
 import '../../../../../../../core/static/theme/theme.dart';
+import 'service_provider_form.dart';
 import 'user_form.dart';
 
 class SignUpForm extends StatelessWidget {

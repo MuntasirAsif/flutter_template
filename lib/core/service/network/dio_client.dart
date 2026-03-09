@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vezy/core/providers/navigator_key_provider.dart';
+import 'package:krio_app/core/providers/navigator_key_provider.dart';
 import '../cache/cache_service.dart';
 import 'endpoints.dart';
 import 'interceptor/token_manager.dart';

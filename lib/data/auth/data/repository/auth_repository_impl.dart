@@ -1,7 +1,7 @@
 import 'package:retrofit/retrofit.dart';
-import 'package:vezy/data/auth/domain/repository/auth_repository.dart';
 
 import '../../../../core/service/network/rest_client.dart';
+import '../../domain/repository/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final RestClient _restClient;

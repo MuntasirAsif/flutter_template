@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vezy/core/static/extensions/localization_extension.dart';
-import 'package:vezy/core/static/theme/theme.dart';
 
 import '../../../../../../core/providers/language_provider.dart';
+import '../../../../../../core/static/extensions/localization_extension.dart';
+import '../../../../../../core/static/theme/theme.dart';
 
 class LanguageSelectionPart extends ConsumerWidget {
   const LanguageSelectionPart({super.key});

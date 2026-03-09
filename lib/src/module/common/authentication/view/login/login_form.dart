@@ -3,15 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:go_router/go_router.dart';
-import 'package:vezy/core/static/extensions/localization_extension.dart';
-import 'package:vezy/core/routes/route_const.dart';
-import 'package:vezy/core/static/theme/theme.dart';
-import 'package:vezy/data/auth/data/model/login_model.dart';
-import 'package:vezy/src/module/common/authentication/view_model/login_view_model.dart';
-import 'package:vezy/src/widgets/custom_toast.dart';
-
+import '../../../../../../core/routes/route_const.dart';
+import '../../../../../../core/static/extensions/localization_extension.dart';
 import '../../../../../../core/static/theme/src/theme_extensions/src/dimensions.dart';
+import '../../../../../../core/static/theme/theme.dart';
+import '../../../../../../data/auth/data/model/login_model.dart';
 import '../../../../../widgets/custom_loading_indicator.dart';
+import '../../../../../widgets/custom_toast.dart';
+import '../../view_model/login_view_model.dart';
 
 class SignInForm extends StatelessWidget {
   const SignInForm({super.key});
@@ -166,7 +165,7 @@ class SignInForm extends StatelessWidget {
                           description: 'Login successfully!',
                         );
                         
-                        context.push(RouteConst.userHomeScreen);
+context.push(RouteConst.userHomeScreen);
                       }
                     }
                   },

@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:vezy/core/routes/route_const.dart';
-import 'package:vezy/core/service/cache/cache_service.dart';
-import 'package:vezy/core/static/theme/theme.dart';
+
+import '../../../../../core/routes/route_const.dart';
+import '../../../../../core/service/cache/cache_service.dart';
+import '../../../../../core/static/theme/theme.dart';
+
 
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});

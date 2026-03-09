@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:vezy/core/static/const/app_icons.dart';
-import 'package:vezy/core/static/theme/theme.dart';
 
 import 'package:go_router/go_router.dart';
+
+import '../../../../../core/static/const/app_icons.dart';
+import '../../../../../core/static/theme/theme.dart';
 
 enum UserRole{ user, provider}
 

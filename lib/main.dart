@@ -4,12 +4,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vezy/core/routes/part_of.dart';
-import 'package:vezy/core/static/theme/theme.dart';
-import 'package:vezy/core/gen/l10n/app_localizations.dart';
 
+
+import 'core/gen/l10n/app_localizations.dart';
 import 'core/providers/language_provider.dart';
+import 'core/routes/part_of.dart';
 import 'core/service/cache/cache_service.dart';
+import 'core/static/theme/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

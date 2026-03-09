@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:vezy/core/static/const/app_images.dart';
-import 'package:vezy/core/static/extensions/localization_extension.dart';
-import 'package:vezy/core/routes/route_const.dart';
-import 'package:vezy/core/static/theme/theme.dart';
 
+
+import '../../../../../../core/routes/route_const.dart';
+import '../../../../../../core/static/const/app_images.dart';
+import '../../../../../../core/static/extensions/localization_extension.dart';
+import '../../../../../../core/static/theme/theme.dart';
 import 'login_form.dart';
 
 class LoginScreen extends StatelessWidget {

@@ -1,9 +1,12 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod/legacy.dart';
-import 'package:vezy/core/service/network/api_handler.dart';
-import 'package:vezy/data/auth/data/model/send_otp_forget_model.dart';
-import 'package:vezy/data/auth/domain/repository/auth_repository.dart';
-import 'package:vezy/data/auth/provider/auth_repository_provider.dart';
+  
+import '../../../../../core/service/network/api_handler.dart';
+import '../../../../../data/auth/data/model/send_otp_forget_model.dart';
+import '../../../../../data/auth/domain/repository/auth_repository.dart';
+import '../../../../../data/auth/provider/auth_repository_provider.dart';
+
+
 
 class VerifyOtpViewModel extends StateNotifier<AsyncValue<void>> {
   final AuthRepository _authRepository;
