@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../routes/route_const.dart';
 import '../../cache/cache_service.dart';
 
 class TokenManager extends Interceptor {
@@ -148,7 +149,7 @@ class TokenManager extends Interceptor {
 
   void _navigateToLoginScreen() {
     if (navigatorKey.currentState?.mounted == true) {
-     // navigatorKey.currentState?.context.goNamed(RouteConst.login, extra: true);
+      navigatorKey.currentState?.context.goNamed(RouteConst.login, extra: true);
     }
   }
 
