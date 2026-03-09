@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vezy/core/routes/part_of.dart';
+import 'package:vezy/core/static/theme/theme.dart';
+import 'package:vezy/core/gen/l10n/app_localizations.dart';
+
+import 'core/providers/language_provider.dart';
+import 'core/service/cache/cache_service.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ScreenUtil.ensureScreenSize();
+
+  final prefs = await SharedPreferences.getInstance();
+
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ),
+  );
+
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+
+  runApp(
+    ProviderScope(
+      overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
+      child: const MyApp(),
+    ),
+  );
+}
+
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(routerProvider);
+    final locale = ref.watch(languageProvider);
+
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      ensureScreenSize: true,
+      builder: (context, child) {
+        return MaterialApp.router(
+          title: 'VEZY',
+          locale: locale,
+          supportedLocales: S.supportedLocales,
+          localizationsDelegates: S.localizationsDelegates,
+          debugShowCheckedModeBanner: false,
+          theme: context.lightTheme,
+          darkTheme: context.darkTheme,
+          themeMode: ThemeMode.light,
+          routerConfig: router,
+        );
+      },
+    );
+  }
+}

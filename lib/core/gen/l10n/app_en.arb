@@ -1,0 +1,1592 @@
+{
+  "@@locale": "en",
+  "or": "Or",
+  "effortless_home_maintenance_at_your_fingertips": "Effortless home maintenance at your fingertips!",
+  "@effortless_home_maintenance_at_your_fingertips": {
+    "description": "Auto extracted: Effortless home maintenance at your fingertips!"
+  },
+  "find_top_rated_professionals_for_servicing_cleaning_electrical_work": "Find top-rated professionals for servicing, cleaning, electrical work, and more.",
+  "@find_top_rated_professionals_for_servicing_cleaning_electrical_work": {
+    "description": "Auto extracted: Find top-rated professionals for servicing, cleaning, electrical work, and more."
+  },
+  "top_quality_home_services_at_the_best_price": "Top-quality home services at the best price.",
+  "@top_quality_home_services_at_the_best_price": {
+    "description": "Auto extracted: Top-quality home services at the best price."
+  },
+  "reliable_affordable_and_professional_get_the_best_service_without_breaking_the_bank": "Reliable, affordable, and professional - get the best service without breaking the bank.",
+  "@reliable_affordable_and_professional_get_the_best_service_without_breaking_the_bank": {
+    "description": "Auto extracted: Reliable, affordable, and professional - get the best service without breaking the bank."
+  },
+  "more_details": "More Details",
+  "@more_details": {
+    "description": "Auto extracted: More Details"
+  },
+  "rajshahi_bangladesh": "Rajshahi, Bangladesh",
+  "@rajshahi_bangladesh": {
+    "description": "Auto extracted: Rajshahi, Bangladesh"
+  },
+  "privacy_policy": "Privacy policy",
+  "@privacy_policy": {
+    "description": "Auto extracted: Privacy policy"
+  },
+  "what_should_we_call_you": "What should we call you?",
+  "@what_should_we_call_you": {
+    "description": "Auto extracted: What should we call you?"
+  },
+  "delete_account_permanently": "Delete account permanently",
+  "@delete_account_permanently": {
+    "description": "Auto extracted: Delete account permanently"
+  },
+  "personal_details": "Personal details",
+  "@personal_details": {
+    "description": "Auto extracted: Personal details"
+  },
+  "city": "City",
+  "@city": {
+    "description": "Auto extracted: City"
+  },
+  "price": "Price",
+  "@price": {
+    "description": "Auto extracted: Price"
+  },
+  "jane_copper": "Jane Copper",
+  "@jane_copper": {
+    "description": "Auto extracted: Jane Copper"
+  },
+  "s_4_5_20": "4.5(20)",
+  "@s_4_5_20": {
+    "description": "Auto extracted: 4.5(20)"
+  },
+  "change_password": "Change Password",
+  "@change_password": {
+    "description": "Auto extracted: Change Password"
+  },
+  "ac_service": "AC Service",
+  "@ac_service": {
+    "description": "Auto extracted: AC Service"
+  },
+  "john_cooper": "John cooper",
+  "@john_cooper": {
+    "description": "Auto extracted: John cooper"
+  },
+  "done": "Done",
+  "@done": {
+    "description": "Auto extracted: Done"
+  },
+  "about_us": "About us",
+  "@about_us": {
+    "description": "Auto extracted: About us"
+  },
+  "change_password_1": "Change password  ",
+  "@change_password_1": {
+    "description": "Auto extracted: Change password  "
+  },
+  "new_password": "New Password",
+  "@new_password": {
+    "description": "Auto extracted: New Password"
+  },
+  "enter_your_otp": "Enter your OTP",
+  "@enter_your_otp": {
+    "description": "Auto extracted: Enter your OTP"
+  },
+  "once_it_s_finished_please_press_on_yes_it_will_sen": "Once it’s finished, please press on Yes, it will send the payment invoice to the user.",
+  "@once_it_s_finished_please_press_on_yes_it_will_sen": {
+    "description": "Auto extracted: Once it’s finished, please press on Yes, it will send the payment invoice to the user."
+  },
+  "type_a_message": "Type a message",
+  "@type_a_message": {
+    "description": "Auto extracted: Type a message"
+  },
+  "vietnamese": "Vietnamese",
+  "@vietnamese": {
+    "description": "Auto extracted: Vietnamese"
+  },
+  "aircon": "Aircon",
+  "@aircon": {
+    "description": "Auto extracted: Aircon"
+  },
+  "reason": "Reason",
+  "@reason": {
+    "description": "Auto extracted: Reason"
+  },
+  "cash": "Cash",
+  "@cash": {
+    "description": "Auto extracted: Cash"
+  },
+  "stay_cool_and_comfortable_with_our_professional_ai": "Stay cool and comfortable with our professional Air Conditioner Installation Service. Whether you’ve purchased a brand-new AC or are relocating an existing unit, our skilled technicians ensure safe, accurate, and efficient installation for maximum cooling performance and long-term reliability.",
+  "@stay_cool_and_comfortable_with_our_professional_ai": {
+    "description": "Auto extracted: Stay cool and comfortable with our professional Air Conditioner Installation Service. Whether you’ve purchased a brand-new AC or are relocating an existing unit, our skilled technicians ensure safe, accurate, and efficient installation for maximum cooling performance and long-term reliability."
+  },
+  "name": "Name",
+  "@name": {
+    "description": "Auto extracted: Name"
+  },
+  "online": "Online",
+  "@online": {
+    "description": "Auto extracted: Online"
+  },
+  "are_you_sure_you_want_to_delete": "Are you sure you want to delete?",
+  "@are_you_sure_you_want_to_delete": {
+    "description": "Auto extracted: Are you sure you want to delete?"
+  },
+  "vi": "vi",
+  "@vi": {
+    "description": "Auto extracted: vi"
+  },
+  "confirm_your_password": "Confirm your Password",
+  "@confirm_your_password": {
+    "description": "Auto extracted: Confirm your Password"
+  },
+  "verification_screen": "Verification Screen",
+  "@verification_screen": {
+    "description": "Auto extracted: Verification Screen"
+  },
+  "english": "English",
+  "@english": {
+    "description": "Auto extracted: English"
+  },
+  "hello": "Hello 👋",
+  "@hello": {
+    "description": "Auto extracted: Hello 👋"
+  },
+  "work_history": "Work History",
+  "@work_history": {
+    "description": "Auto extracted: Work History"
+  },
+  "service_categories": "Service Categories",
+  "@service_categories": {
+    "description": "Auto extracted: Service Categories"
+  },
+  "customer_feedback": "Customer Feedback",
+  "@customer_feedback": {
+    "description": "Auto extracted: Customer Feedback"
+  },
+  "order_id": "Order Id",
+  "@order_id": {
+    "description": "Auto extracted: Order Id"
+  },
+  "already_have_an_account": "Already have an account? ",
+  "@already_have_an_account": {
+    "description": "Auto extracted: Already have an account? "
+  },
+  "enter_your_current_password": "Enter your current password",
+  "@enter_your_current_password": {
+    "description": "Auto extracted: Enter your current password"
+  },
+  "code_expires_in_59_sec": "Code expires in 59 sec",
+  "@code_expires_in_59_sec": {
+    "description": "Auto extracted: Code expires in 59 sec"
+  },
+  "s_30": "30 ₫",
+  "@s_30": {
+    "description": "Auto extracted: 30 ₫"
+  },
+  "sure_what_service_do_you_need": "Sure! What service do you need?",
+  "@sure_what_service_do_you_need": {
+    "description": "Auto extracted: Sure! What service do you need?"
+  },
+  "done_1": "done",
+  "@done_1": {
+    "description": "Auto extracted: done"
+  },
+  "pending": "pending",
+  "@pending": {
+    "description": "Auto extracted: pending"
+  },
+  "address": "Address",
+  "@address": {
+    "description": "Auto extracted: Address"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Auto extracted: Email"
+  },
+  "outdoor_unit_setup_with_proper_support": "Outdoor unit setup with proper support",
+  "@outdoor_unit_setup_with_proper_support": {
+    "description": "Auto extracted: Outdoor unit setup with proper support"
+  },
+  "s_10_56_am": "10:56 AM",
+  "@s_10_56_am": {
+    "description": "Auto extracted: 10:56 AM"
+  },
+  "add_new_address": "Add New Address",
+  "@add_new_address": {
+    "description": "Auto extracted: Add New Address"
+  },
+  "choose_a_service_to_get_started": " Choose a service to get started.",
+  "@choose_a_service_to_get_started": {
+    "description": "Auto extracted:  Choose a service to get started."
+  },
+  "complete": "Complete",
+  "@complete": {
+    "description": "Auto extracted: Complete"
+  },
+  "provider_details": "Provider Details",
+  "@provider_details": {
+    "description": "Auto extracted: Provider Details"
+  },
+  "ac_cleaning": "AC Cleaning",
+  "@ac_cleaning": {
+    "description": "Auto extracted: AC Cleaning"
+  },
+  "order_timeline": "Order Timeline",
+  "@order_timeline": {
+    "description": "Auto extracted: Order Timeline"
+  },
+  "why_us": "Why  us?",
+  "@why_us": {
+    "description": "Auto extracted: Why  us?"
+  },
+  "i_m_good_need_service_details": "I'm good. Need service details.",
+  "@i_m_good_need_service_details": {
+    "description": "Auto extracted: I'm good. Need service details."
+  },
+  "the_cleaners_were_professional_and_efficient": "The cleaners were professional and efficient.",
+  "@the_cleaners_were_professional_and_efficient": {
+    "description": "Auto extracted: The cleaners were professional and efficient."
+  },
+  "s_775_rolling_green_rd_san_francisco_ca_94109_usa": "775 Rolling Green Rd., San Francisco, CA 94109, USA",
+  "@s_775_rolling_green_rd_san_francisco_ca_94109_usa": {
+    "description": "Auto extracted: 775 Rolling Green Rd., San Francisco, CA 94109, USA"
+  },
+  "we_ve_sent_a_verification_code_to_your_email_a_gma": "We’ve sent a verification code to your email a*@gmail.com. Please enter it below.",
+  "@we_ve_sent_a_verification_code_to_your_email_a_gma": {
+    "description": "Auto extracted: We’ve sent a verification code to your email a*@gmail.com. Please enter it below."
+  },
+  "order_in_progress": "Order In Progress",
+  "@order_in_progress": {
+    "description": "Auto extracted: Order In Progress"
+  },
+  "invoice": "Invoice",
+  "@invoice": {
+    "description": "Auto extracted: Invoice"
+  },
+  "mmm_yyyy": "MMM yyyy",
+  "@mmm_yyyy": {
+    "description": "Auto extracted: MMM yyyy"
+  },
+  "stay_cool_and_comfortable_with_our_professional_ai_1": "Stay cool and comfortable with our professional Air Conditioner Installation Service. Whether you’ve purchased a brand-new AC or are relocating an existing unit",
+  "@stay_cool_and_comfortable_with_our_professional_ai_1": {
+    "description": "Auto extracted: Stay cool and comfortable with our professional Air Conditioner Installation Service. Whether you’ve purchased a brand-new AC or are relocating an existing unit"
+  },
+  "personal_details_1": "Personal Details",
+  "@personal_details_1": {
+    "description": "Auto extracted: Personal Details"
+  },
+  "total": "Total",
+  "@total": {
+    "description": "Auto extracted: Total"
+  },
+  "enter_reason": "Enter reason",
+  "@enter_reason": {
+    "description": "Auto extracted: Enter reason"
+  },
+  "more_details_1": " More Details",
+  "@more_details_1": {
+    "description": "Auto extracted:  More Details"
+  },
+  "mechanic": "Mechanic",
+  "@mechanic": {
+    "description": "Auto extracted: Mechanic"
+  },
+  "s_150": "₫150",
+  "@s_150": {
+    "description": "Auto extracted: ₫150"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Auto extracted: Cancel"
+  },
+  "thousands": "Thousands",
+  "@thousands": {
+    "description": "Auto extracted: Thousands"
+  },
+  "my_addresses": "My Addresses",
+  "@my_addresses": {
+    "description": "Auto extracted: My Addresses"
+  },
+  "confirm_booking": "Confirm Booking",
+  "@confirm_booking": {
+    "description": "Auto extracted: Confirm Booking"
+  },
+  "s_2_30_pm": "2:30 PM",
+  "@s_2_30_pm": {
+    "description": "Auto extracted: 2:30 PM"
+  },
+  "book_now": "Book Now",
+  "@book_now": {
+    "description": "Auto extracted: Book Now"
+  },
+  "message": "/message",
+  "@message": {
+    "description": "Auto extracted: /message"
+  },
+  "service_charges_may_vary_depending_on_site_conditi": "Service charges may vary depending on site condition and additional work requirements.",
+  "@service_charges_may_vary_depending_on_site_conditi": {
+    "description": "Auto extracted: Service charges may vary depending on site condition and additional work requirements."
+  },
+  "ensure_textstyleextension_is_added_to_themedata_ex": "Ensure TextStyleExtension is added to ThemeData.extensions in src/theme_data.dart.",
+  "@ensure_textstyleextension_is_added_to_themedata_ex": {
+    "description": "Auto extracted: Ensure TextStyleExtension is added to ThemeData.extensions in src/theme_data.dart."
+  },
+  "enter_your_password": "Enter your password",
+  "@enter_your_password": {
+    "description": "Auto extracted: Enter your password"
+  },
+  "s_80": "₫80",
+  "@s_80": {
+    "description": "Auto extracted: ₫80"
+  },
+  "add_a_service_note": "Add a service note",
+  "@add_a_service_note": {
+    "description": "Auto extracted: Add a service note"
+  },
+  "edit": "Edit",
+  "@edit": {
+    "description": "Auto extracted: Edit"
+  },
+  "loading_role": "Loading role...",
+  "@loading_role": {
+    "description": "Auto extracted: Loading role..."
+  },
+  "dhaka_bangladesh": "Dhaka, Bangladesh",
+  "@dhaka_bangladesh": {
+    "description": "Auto extracted: Dhaka, Bangladesh"
+  },
+  "enter_your_email": "Enter your email",
+  "@enter_your_email": {
+    "description": "Auto extracted: Enter your email"
+  },
+  "this_app_made_booking_a_cleaning_service_so_easy": "This app made booking a cleaning service so easy! ",
+  "@this_app_made_booking_a_cleaning_service_so_easy": {
+    "description": "Auto extracted: This app made booking a cleaning service so easy! "
+  },
+  "hassan_ali": "Hassan Ali",
+  "@hassan_ali": {
+    "description": "Auto extracted: Hassan Ali"
+  },
+  "booking": "/booking",
+  "@booking": {
+    "description": "Auto extracted: /booking"
+  },
+  "enter_your_email_address": "Enter your email address",
+  "@enter_your_email_address": {
+    "description": "Auto extracted: Enter your email address"
+  },
+  "sign_up": "Sign Up",
+  "@sign_up": {
+    "description": "Auto extracted: Sign Up"
+  },
+  "provider": "Provider",
+  "@provider": {
+    "description": "Auto extracted: Provider"
+  },
+  "quantity_2": "Quantity: 2",
+  "@quantity_2": {
+    "description": "Auto extracted: Quantity: 2"
+  },
+  "date_and_time": "Date and Time",
+  "@date_and_time": {
+    "description": "Auto extracted: Date and Time"
+  },
+  "forgot_your_password_we_ll_help_you_reset_it": "Forgot your password? We’ll help you reset it.",
+  "@forgot_your_password_we_ll_help_you_reset_it": {
+    "description": "Auto extracted: Forgot your password? We’ll help you reset it."
+  },
+  "search": "Search",
+  "@search": {
+    "description": "Auto extracted: Search"
+  },
+  "congratulations": "Congratulations!",
+  "@congratulations": {
+    "description": "Auto extracted: Congratulations!"
+  },
+  "order_completed": "Order Completed",
+  "@order_completed": {
+    "description": "Auto extracted: Order Completed"
+  },
+  "are_you_sure_you_want_to_logout": "Are you sure you want to logout?",
+  "@are_you_sure_you_want_to_logout": {
+    "description": "Auto extracted: Are you sure you want to logout?"
+  },
+  "booking_status": "Booking Status",
+  "@booking_status": {
+    "description": "Auto extracted: Booking Status"
+  },
+  "select_address": "Select Address",
+  "@select_address": {
+    "description": "Auto extracted: Select Address"
+  },
+  "s_500_hr": "₫500/hr",
+  "@s_500_hr": {
+    "description": "Auto extracted: ₫500/hr"
+  },
+  "booking_history": "Booking History",
+  "@booking_history": {
+    "description": "Auto extracted: Booking History"
+  },
+  "agree_with_terms_condition": "agree with terms & condition",
+  "@agree_with_terms_condition": {
+    "description": "Auto extracted: agree with terms & condition"
+  },
+  "popular_services": "Popular Services",
+  "@popular_services": {
+    "description": "Auto extracted: Popular Services"
+  },
+  "pending_1": "Pending",
+  "@pending_1": {
+    "description": "Auto extracted: Pending"
+  },
+  "next": "Next",
+  "@next": {
+    "description": "Auto extracted: Next"
+  },
+  "confirm_password": "Confirm Password",
+  "@confirm_password": {
+    "description": "Auto extracted: Confirm Password"
+  },
+  "search_for_services": "Search for services",
+  "@search_for_services": {
+    "description": "Auto extracted: Search for services"
+  },
+  "ensure_dimensions_is_added_to_themedata_extensions": "Ensure Dimensions is added to ThemeData.extensions in src/theme_data.dart.",
+  "@ensure_dimensions_is_added_to_themedata_extensions": {
+    "description": "Auto extracted: Ensure Dimensions is added to ThemeData.extensions in src/theme_data.dart."
+  },
+  "yes_cancel": "Yes, Cancel",
+  "@yes_cancel": {
+    "description": "Auto extracted: Yes, Cancel"
+  },
+  "s_130": "₫130",
+  "@s_130": {
+    "description": "Auto extracted: ₫130"
+  },
+  "confirm_your_new_password": "Confirm your new password",
+  "@confirm_your_new_password": {
+    "description": "Auto extracted: Confirm your new password"
+  },
+  "payment_confirmed": "Payment Confirmed",
+  "@payment_confirmed": {
+    "description": "Auto extracted: Payment Confirmed"
+  },
+  "what_s_included_in_our_ac_installation_service": "What’s Included in Our AC Installation Service",
+  "@what_s_included_in_our_ac_installation_service": {
+    "description": "Auto extracted: What’s Included in Our AC Installation Service"
+  },
+  "chattogram_bangladesh": "Chattogram, Bangladesh",
+  "@chattogram_bangladesh": {
+    "description": "Auto extracted: Chattogram, Bangladesh"
+  },
+  "splash": "/splash",
+  "@splash": {
+    "description": "Auto extracted: /splash"
+  },
+  "s_10_57_am": "10:57 AM",
+  "@s_10_57_am": {
+    "description": "Auto extracted: 10:57 AM"
+  },
+  "stay_cool_and_comfortable_with_our_professional_ai_1_2": "Stay cool and comfortable with our professional Air Conditioner Installation Service. Whether you’ve purchased a brand-new AC or are relocating an existing unit, we’ll install it safely and efficiently. Trust us to provide you with the best Air Conditioner Installation Service in the area, so you can enjoy a cool and comfortable home all year long.",
+  "@stay_cool_and_comfortable_with_our_professional_ai_1_2": {
+    "description": "Auto extracted: Stay cool and comfortable with our professional Air Conditioner Installation Service. Whether you’ve purchased a brand-new AC or are relocating an existing unit, we’ll install it safely and efficiently. Trust us to provide you with the best Air Conditioner Installation Service in the area, so you can enjoy a cool and comfortable home all year long."
+  },
+  "sign_in": "Sign in",
+  "@sign_in": {
+    "description": "Auto extracted: Sign in"
+  },
+  "enter_your_new_password": "Enter your new password",
+  "@enter_your_new_password": {
+    "description": "Auto extracted: Enter your new password"
+  },
+  "categories": "Categories",
+  "@categories": {
+    "description": "Auto extracted: Categories"
+  },
+  "payment_method": "Payment Method",
+  "@payment_method": {
+    "description": "Auto extracted: Payment Method"
+  },
+  "ac_installation": "AC Installation",
+  "@ac_installation": {
+    "description": "Auto extracted: AC Installation"
+  },
+  "type_here": "Type here",
+  "@type_here": {
+    "description": "Auto extracted: Type here"
+  },
+  "accept": "Accept",
+  "@accept": {
+    "description": "Auto extracted: Accept"
+  },
+  "time": "Time: ",
+  "@time": {
+    "description": "Auto extracted: Time: "
+  },
+  "toufik_hasan": "Toufik Hasan",
+  "@toufik_hasan": {
+    "description": "Auto extracted: Toufik Hasan"
+  },
+  "old_password": "Old Password",
+  "@old_password": {
+    "description": "Auto extracted: Old Password"
+  },
+  "ac_repair": "AC Repair",
+  "@ac_repair": {
+    "description": "Auto extracted: AC Repair"
+  },
+  "enter_your_phone_number": "Enter your phone number",
+  "@enter_your_phone_number": {
+    "description": "Auto extracted: Enter your phone number"
+  },
+  "canceled": "canceled",
+  "@canceled": {
+    "description": "Auto extracted: canceled"
+  },
+  "s_10_00_am": "10:00 AM",
+  "@s_10_00_am": {
+    "description": "Auto extracted: 10:00 AM"
+  },
+  "enter_address_name": "Enter address name",
+  "@enter_address_name": {
+    "description": "Auto extracted: Enter address name"
+  },
+  "s_123456": " #123456",
+  "@s_123456": {
+    "description": "Auto extracted:  #123456"
+  },
+  "note": "Note",
+  "@note": {
+    "description": "Auto extracted: Note"
+  },
+  "s_50": "₫50",
+  "@s_50": {
+    "description": "Auto extracted: ₫50"
+  },
+  "booking_date": "Booking date",
+  "@booking_date": {
+    "description": "Auto extracted: Booking date"
+  },
+  "booking_date_label": "Booking date: {date}",
+  "@booking_date_label": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "service_date_label": "Service date: {date}",
+  "@service_date_label": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Auto extracted: Language"
+  },
+  "enter_your_name": "Enter your name",
+  "@enter_your_name": {
+    "description": "Auto extracted: Enter your name"
+  },
+  "toufik_hasan_home": "Toufik Hasan Home",
+  "@toufik_hasan_home": {
+    "description": "Auto extracted: Toufik Hasan Home"
+  },
+  "user": "User",
+  "@user": {
+    "description": "Auto extracted: User"
+  },
+  "additional_note": "Additional Note",
+  "@additional_note": {
+    "description": "Auto extracted: Additional Note"
+  },
+  "s_123_nguyen_trai_street_ward_7_district_5_ho_chi": "123 Nguyen Trai Street, Ward 7, District 5, Ho Chi Minh",
+  "@s_123_nguyen_trai_street_ward_7_district_5_ho_chi": {
+    "description": "Auto extracted: 123 Nguyen Trai Street, Ward 7, District 5, Ho Chi Minh"
+  },
+  "enter_address": "Enter address",
+  "@enter_address": {
+    "description": "Auto extracted: Enter address"
+  },
+  "logout": "Logout",
+  "@logout": {
+    "description": "Auto extracted: Logout"
+  },
+  "yes_send_invoice": "Yes, Send Invoice",
+  "@yes_send_invoice": {
+    "description": "Auto extracted: Yes, Send Invoice"
+  },
+  "ac_maintenance": "AC Maintenance",
+  "@ac_maintenance": {
+    "description": "Auto extracted: AC Maintenance"
+  },
+  "reset_password": "Reset Password",
+  "@reset_password": {
+    "description": "Auto extracted: Reset Password"
+  },
+  "s_10_58_am": "10:58 AM",
+  "@s_10_58_am": {
+    "description": "Auto extracted: 10:58 AM"
+  },
+  "hi_hassan_ali": "Hi, Hassan Ali",
+  "@hi_hassan_ali": {
+    "description": "Auto extracted: Hi, Hassan Ali"
+  },
+  "hanoi_city_vietnam": "Hanoi City, Vietnam",
+  "@hanoi_city_vietnam": {
+    "description": "Auto extracted: Hanoi City, Vietnam"
+  },
+  "may_20_2023": "May 20, 2023",
+  "@may_20_2023": {
+    "description": "Auto extracted: May 20, 2023"
+  },
+  "completed": "Completed",
+  "@completed": {
+    "description": "Auto extracted: Completed"
+  },
+  "hh_mm_a": "hh:mm a",
+  "@hh_mm_a": {
+    "description": "Auto extracted: hh:mm a"
+  },
+  "terms_and_conditions": "Terms and Conditions",
+  "@terms_and_conditions": {
+    "description": "Auto extracted: Terms and Conditions"
+  },
+  "messages": "Messages",
+  "@messages": {
+    "description": "Auto extracted: Messages"
+  },
+  "my_addresses_1": "My addresses",
+  "@my_addresses_1": {
+    "description": "Auto extracted: My addresses"
+  },
+  "order_id_123456": "Order id #123456",
+  "@order_id_123456": {
+    "description": "Auto extracted: Order id #123456"
+  },
+  "goto_home": "Goto Home",
+  "@goto_home": {
+    "description": "Auto extracted: Goto Home"
+  },
+  "log_in": "Log in",
+  "@log_in": {
+    "description": "Auto extracted: Log in"
+  },
+  "service_proposal": "Service Proposal",
+  "@service_proposal": {
+    "description": "Auto extracted: Service Proposal"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Auto extracted: Password"
+  },
+  "s_100_000": "₫100,000",
+  "@s_100_000": {
+    "description": "Auto extracted: ₫100,000"
+  },
+  "enter_a_new_password_to_regain_access_to_your_acco": "Enter a new password to regain access to your account.",
+  "@enter_a_new_password_to_regain_access_to_your_acco": {
+    "description": "Auto extracted: Enter a new password to regain access to your account."
+  },
+  "jane_cooper": "Jane Cooper",
+  "@jane_cooper": {
+    "description": "Auto extracted: Jane Cooper"
+  },
+  "select_date": "Select Date",
+  "@select_date": {
+    "description": "Auto extracted: Select Date"
+  },
+  "dd_mmm": "dd MMM",
+  "@dd_mmm": {
+    "description": "Auto extracted: dd MMM"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "Auto extracted: Save"
+  },
+  "log_out": "Log out",
+  "@log_out": {
+    "description": "Auto extracted: Log out"
+  },
+  "are_you_sure_the_work_is_fully_completed": "Are you sure the work is fully completed? ",
+  "@are_you_sure_the_work_is_fully_completed": {
+    "description": "Auto extracted: Are you sure the work is fully completed? "
+  },
+  "submit": "Submit",
+  "@submit": {
+    "description": "Auto extracted: Submit"
+  },
+  "enter_city": "Enter City",
+  "@enter_city": {
+    "description": "Auto extracted: Enter City"
+  },
+  "forgot_password": "Forgot Password",
+  "@forgot_password": {
+    "description": "Auto extracted: Forgot Password"
+  },
+  "time_1": "Time",
+  "@time_1": {
+    "description": "Auto extracted: Time"
+  },
+  "ensure_colorextension_is_added_to_themedata_extens": "Ensure ColorExtension is added to ThemeData.extensions in src/theme_data.dart.",
+  "@ensure_colorextension_is_added_to_themedata_extens": {
+    "description": "Auto extracted: Ensure ColorExtension is added to ThemeData.extensions in src/theme_data.dart."
+  },
+  "select_time": "Select Time",
+  "@select_time": {
+    "description": "Auto extracted: Select Time"
+  },
+  "in_review": "In Review",
+  "@in_review": {
+    "description": "Auto extracted: In Review"
+  },
+  "hi_how_are_you": "Hi! How are you?",
+  "@hi_how_are_you": {
+    "description": "Auto extracted: Hi! How are you?"
+  },
+  "s_10_55_am": "10:55 AM",
+  "@s_10_55_am": {
+    "description": "Auto extracted: 10:55 AM"
+  },
+  "dd_mmm_yyyy": "dd MMM yyyy",
+  "@dd_mmm_yyyy": {
+    "description": "Auto extracted: dd MMM yyyy"
+  },
+  "s_4_5_10": "4.5(10)",
+  "@s_4_5_10": {
+    "description": "Auto extracted: 4.5(10)"
+  },
+  "select_language": "Select Language",
+  "@select_language": {
+    "description": "Auto extracted: Select Language"
+  },
+  "selected_service": "Selected Service",
+  "@selected_service": {
+    "description": "Auto extracted: Selected Service"
+  },
+  "card": "Card",
+  "@card": {
+    "description": "Auto extracted: Card"
+  },
+  "create_your_account_it_s_quick_and_easy": "Create your account. It's quick and easy.",
+  "@create_your_account_it_s_quick_and_easy": {
+    "description": "Auto extracted: Create your account. It's quick and easy."
+  },
+  "change": "Change",
+  "@change": {
+    "description": "Auto extracted: Change"
+  },
+  "khulna_bangladesh": "Khulna, Bangladesh",
+  "@khulna_bangladesh": {
+    "description": "Auto extracted: Khulna, Bangladesh"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Auto extracted: Delete"
+  },
+  "dd_mmm_yyyy_hh_mm_a": "dd MMM yyyy, hh:mm a",
+  "@dd_mmm_yyyy_hh_mm_a": {
+    "description": "Auto extracted: dd MMM yyyy, hh:mm a"
+  },
+  "see_all": "See All",
+  "@see_all": {
+    "description": "Auto extracted: See All"
+  },
+  "add_service": "+ Add Service",
+  "@add_service": {
+    "description": "Auto extracted: + Add Service"
+  },
+  "service_details": "Service Details",
+  "@service_details": {
+    "description": "Auto extracted: Service Details"
+  },
+  "date": "Date",
+  "@date": {
+    "description": "Auto extracted: Date"
+  },
+  "login": "/login",
+  "@login": {
+    "description": "Auto extracted: /login"
+  },
+  "booking_details": "Booking Details",
+  "@booking_details": {
+    "description": "Auto extracted: Booking Details"
+  },
+  "s_4_5": "4.5",
+  "@s_4_5": {
+    "description": "Auto extracted: 4.5"
+  },
+  "no": "No",
+  "@no": {
+    "description": "Auto extracted: No"
+  },
+  "ac_gas_refill": "AC Gas Refill",
+  "@ac_gas_refill": {
+    "description": "Auto extracted: AC Gas Refill"
+  },
+  "order_placed": "Order Placed",
+  "@order_placed": {
+    "description": "Auto extracted: Order Placed"
+  },
+  "all": "All",
+  "@all": {
+    "description": "Auto extracted: All"
+  },
+  "are_you_sure_want_to_cancel_this_order": "Are you sure want to cancel this order?",
+  "@are_you_sure_want_to_cancel_this_order": {
+    "description": "Auto extracted: Are you sure want to cancel this order?"
+  },
+  "invoice_1": "/invoice",
+  "@invoice_1": {
+    "description": "Auto extracted: /invoice"
+  },
+  "booking_request": "Booking Request",
+  "@booking_request": {
+    "description": "Auto extracted: Booking Request"
+  },
+  "cancellation_policy": "Cancellation Policy",
+  "@cancellation_policy": {
+    "description": "Auto extracted: Cancellation Policy"
+  },
+  "phone_number": "Phone Number",
+  "@phone_number": {
+    "description": "Auto extracted: Phone Number"
+  },
+  "selected_value": "Selected: $value",
+  "@selected_value": {
+    "description": "Auto extracted: Selected: $value"
+  },
+  "no_don_t_delete": "No, Don’t Delete",
+  "@no_don_t_delete": {
+    "description": "Auto extracted: No, Don’t Delete"
+  },
+  "your_order_has_been_completed_successfully": "Your order has been completed successfully!",
+  "@your_order_has_been_completed_successfully": {
+    "description": "Auto extracted: Your order has been completed successfully!"
+  },
+  "service_provider": "Service Provider",
+  "@service_provider": {
+    "description": "Auto extracted: Service Provider"
+  },
+  "indoor_unit_mounting_and_positioning": "Indoor unit mounting and positioning",
+  "@indoor_unit_mounting_and_positioning": {
+    "description": "Auto extracted: Indoor unit mounting and positioning"
+  },
+  "s_30_1": "₫30",
+  "@s_30_1": {
+    "description": "Auto extracted: ₫30"
+  },
+  "s_50_hr": "₫50/hr",
+  "@s_50_hr": {
+    "description": "Auto extracted: ₫50/hr"
+  },
+  "payments_and_refunds": "Payments and refunds",
+  "@payments_and_refunds": {
+    "description": "Auto extracted: Payments and refunds"
+  },
+  "cancelled": "Cancelled",
+  "@cancelled": {
+    "description": "Auto extracted: Cancelled"
+  },
+  "date_1": "Date: ",
+  "@date_1": {
+    "description": "Auto extracted: Date: "
+  },
+  "remember_me": "Remember me",
+  "@remember_me": {
+    "description": "Auto extracted: Remember me"
+  },
+  "sign_in_with_google": "Sign in with Google",
+  "@sign_in_with_google": {
+    "description": "Auto extracted: Sign in with Google"
+  },
+  "don_t_have_an_account": "Don't have an account?",
+  "@don_t_have_an_account": {
+    "description": "Auto extracted: Don't have an account?"
+  },
+  "skip": "Skip",
+  "@skip": {
+    "description": "Auto extracted: Skip"
+  },
+  "log_in_to_your_account": "Log in to your account",
+  "@log_in_to_your_account": {
+    "description": "Auto extracted: Log in to your account"
+  },
+  "reviews": "Reviews",
+  "@reviews": {
+    "description": "Auto extracted: Reviews"
+  },
+  "quick_and_efficient_handled_the_complicated_wiring": "Quick and efficient. Handled the complicated wiring with ease. Very knowledgeable technician.",
+  "@quick_and_efficient_handled_the_complicated_wiring": {
+    "description": "Auto extracted: Quick and efficient. Handled the complicated wiring with ease. Very knowledgeable technician."
+  },
+  "cleaning": "Cleaning",
+  "@cleaning": {
+    "description": "Auto extracted: Cleaning"
+  },
+  "your_facial_data_is_stored_securely_on_your_device": "Your facial data is stored securely on your device.We do not save or access your biometric information.",
+  "@your_facial_data_is_stored_securely_on_your_device": {
+    "description": "Auto extracted: Your facial data is stored securely on your device.We do not save or access your biometric information."
+  },
+  "your_privacy_is_important_to_us_it_is_our_policy_t": "Your privacy is important to us. It is our policy to respect your privacy regarding any information we may collect from you through our app.",
+  "@your_privacy_is_important_to_us_it_is_our_policy_t": {
+    "description": "Auto extracted: Your privacy is important to us. It is our policy to respect your privacy regarding any information we may collect from you through our app."
+  },
+  "the_best_service_i_ve_had_in_a_long_time_they_even": "The best service I've had in a long time. They even cleaned up after the work was done!",
+  "@the_best_service_i_ve_had_in_a_long_time_they_even": {
+    "description": "Auto extracted: The best service I've had in a long time. They even cleaned up after the work was done!"
+  },
+  "today_s_earnings": "Today's Earnings",
+  "@today_s_earnings": {
+    "description": "Auto extracted: Today's Earnings"
+  },
+  "face_id": "Face ID",
+  "@face_id": {
+    "description": "Auto extracted: Face ID"
+  },
+  "approved": "approved",
+  "@approved": {
+    "description": "Auto extracted: approved"
+  },
+  "s_1_week_ago": "1 week ago",
+  "@s_1_week_ago": {
+    "description": "Auto extracted: 1 week ago"
+  },
+  "active_on_this_device": "Active on this device",
+  "@active_on_this_device": {
+    "description": "Auto extracted: Active on this device"
+  },
+  "plumbing": "Plumbing",
+  "@plumbing": {
+    "description": "Auto extracted: Plumbing"
+  },
+  "ductless_mini_split_ac": "Ductless Mini Split AC",
+  "@ductless_mini_split_ac": {
+    "description": "Auto extracted: Ductless Mini Split AC"
+  },
+  "s_2_use_of_information": "2. Use of Information",
+  "@s_2_use_of_information": {
+    "description": "Auto extracted: 2. Use of Information"
+  },
+  "enter_your_description": "Enter your description",
+  "@enter_your_description": {
+    "description": "Auto extracted: Enter your description"
+  },
+  "use_facial_recognition_for_faster_and_secure_acces": "Use facial recognition for faster and secure access.",
+  "@use_facial_recognition_for_faster_and_secure_acces": {
+    "description": "Auto extracted: Use facial recognition for faster and secure access."
+  },
+  "privacy_policy_1": "Privacy Policy",
+  "@privacy_policy_1": {
+    "description": "Auto extracted: Privacy Policy"
+  },
+  "we_reserve_the_right_at_our_sole_discretion_to_mod": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time.",
+  "@we_reserve_the_right_at_our_sole_discretion_to_mod": {
+    "description": "Auto extracted: We reserve the right, at our sole discretion, to modify or replace these Terms at any time."
+  },
+  "customer_satisfaction_is_at_the_heart_of_everythin": "Customer satisfaction is at the heart of everything we do. From on-time service to transparent pricing and professional support, we strive to deliver a smooth and stress-free experience every time you book with us.",
+  "@customer_satisfaction_is_at_the_heart_of_everythin": {
+    "description": "Auto extracted: Customer satisfaction is at the heart of everything we do. From on-time service to transparent pricing and professional support, we strive to deliver a smooth and stress-free experience every time you book with us."
+  },
+  "s_1000": "1000",
+  "@s_1000": {
+    "description": "Auto extracted: 1000"
+  },
+  "aircon_services": "Aircon Services",
+  "@aircon_services": {
+    "description": "Auto extracted: Aircon Services"
+  },
+  "we_only_ask_for_personal_information_when_we_truly": "We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent.",
+  "@we_only_ask_for_personal_information_when_we_truly": {
+    "description": "Auto extracted: We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent."
+  },
+  "earning": "Earning",
+  "@earning": {
+    "description": "Auto extracted: Earning"
+  },
+  "we_are_a_trusted_home_service_company_dedicated_to": "We are a trusted home service company dedicated to providing reliable, affordable, and high-quality air conditioning solutions. With a team of skilled and experienced technicians, we specialize in AC installation, repair, cleaning, and maintenance for homes and businesses.",
+  "@we_are_a_trusted_home_service_company_dedicated_to": {
+    "description": "Auto extracted: We are a trusted home service company dedicated to providing reliable, affordable, and high-quality air conditioning solutions. With a team of skilled and experienced technicians, we specialize in AC installation, repair, cleaning, and maintenance for homes and businesses."
+  },
+  "reliable_affordable_and_professional_get_the_best": "Reliable, Affordable, and Professional – Get the Best Service Without Breaking the Bank!",
+  "@reliable_affordable_and_professional_get_the_best": {
+    "description": "Auto extracted: Reliable, Affordable, and Professional – Get the Best Service Without Breaking the Bank!"
+  },
+  "create_account": "Create Account",
+  "@create_account": {
+    "description": "Auto extracted: Create Account"
+  },
+  "location": "Location",
+  "@location": {
+    "description": "Auto extracted: Location"
+  },
+  "vat_number": "VAT Number",
+  "@vat_number": {
+    "description": "Auto extracted: VAT Number"
+  },
+  "s_3_modifications": "3. Modifications",
+  "@s_3_modifications": {
+    "description": "Auto extracted: 3. Modifications"
+  },
+  "enter_your_email_1": "Enter your Email",
+  "@enter_your_email_1": {
+    "description": "Auto extracted: Enter your Email"
+  },
+  "enter_your_year_of_experience": "Enter your year of experience",
+  "@enter_your_year_of_experience": {
+    "description": "Auto extracted: Enter your year of experience"
+  },
+  "enter_your_phone_number_1": "Enter your Phone Number",
+  "@enter_your_phone_number_1": {
+    "description": "Auto extracted: Enter your Phone Number"
+  },
+  "verify_again": "Verify Again",
+  "@verify_again": {
+    "description": "Auto extracted: Verify Again"
+  },
+  "review_submitted_successfully": "Review submitted successfully",
+  "@review_submitted_successfully": {
+    "description": "Auto extracted: Review submitted successfully"
+  },
+  "initialize_this_in_main": "Initialize this in main",
+  "@initialize_this_in_main": {
+    "description": "Auto extracted: Initialize this in main"
+  },
+  "s_1_hour_ago": "1 hour ago",
+  "@s_1_hour_ago": {
+    "description": "Auto extracted: 1 hour ago"
+  },
+  "enter_your_email_address_or_phone_number": "Enter your email address or phone number",
+  "@enter_your_email_address_or_phone_number": {
+    "description": "Auto extracted: Enter your email address or phone number"
+  },
+  "window_ac": "Window AC",
+  "@window_ac": {
+    "description": "Auto extracted: Window AC"
+  },
+  "enter_your_email_or_phone_number": "Enter your email or phone number",
+  "@enter_your_email_or_phone_number": {
+    "description": "Auto extracted: Enter your email or phone number"
+  },
+  "you_agree_to_use_the_app_responsibly_and_not_for_a": "You agree to use the app responsibly and not for any illegal or unauthorized purpose.",
+  "@you_agree_to_use_the_app_responsibly_and_not_for_a": {
+    "description": "Auto extracted: You agree to use the app responsibly and not for any illegal or unauthorized purpose."
+  },
+  "order_id_orderid": "Order id #$orderId",
+  "@order_id_orderid": {
+    "description": "Auto extracted: Order id #$orderId"
+  },
+  "service_completed": "Service Completed",
+  "@service_completed": {
+    "description": "Auto extracted: Service Completed"
+  },
+  "enter_your_bank_branch": "Enter your bank branch",
+  "@enter_your_bank_branch": {
+    "description": "Auto extracted: Enter your bank branch"
+  },
+  "s_4_8": "4.8",
+  "@s_4_8": {
+    "description": "Auto extracted: 4.8"
+  },
+  "charlie_puth": "Charlie Puth",
+  "@charlie_puth": {
+    "description": "Auto extracted: Charlie Puth"
+  },
+  "company_name": "Company Name",
+  "@company_name": {
+    "description": "Auto extracted: Company Name"
+  },
+  "bearer_accesstoken": "Bearer $accessToken",
+  "@bearer_accesstoken": {
+    "description": "Auto extracted: Bearer $accessToken"
+  },
+  "refund_request": "Refund Request",
+  "@refund_request": {
+    "description": "Auto extracted: Refund Request"
+  },
+  "electrician": "Electrician",
+  "@electrician": {
+    "description": "Auto extracted: Electrician"
+  },
+  "en": "en",
+  "@en": {
+    "description": "Auto extracted: en"
+  },
+  "no_refresh_token_available": "No refresh token available",
+  "@no_refresh_token_available": {
+    "description": "Auto extracted: No refresh token available"
+  },
+  "you_have_not_received_the_email": "You have not received the email?",
+  "@you_have_not_received_the_email": {
+    "description": "Auto extracted: You have not received the email?"
+  },
+  "add_review": "Add Review",
+  "@add_review": {
+    "description": "Auto extracted: Add Review"
+  },
+  "your_payment_for_the_invoice_12345_was_successful": "Your payment for the invoice #12345 was successful.",
+  "@your_payment_for_the_invoice_12345_was_successful": {
+    "description": "Auto extracted: Your payment for the invoice #12345 was successful."
+  },
+  "add": "Add",
+  "@add": {
+    "description": "Auto extracted: Add"
+  },
+  "based_on_124_reviews": "Based on 124 reviews",
+  "@based_on_124_reviews": {
+    "description": "Auto extracted: Based on 124 reviews"
+  },
+  "select": "Select",
+  "@select": {
+    "description": "Auto extracted: Select"
+  },
+  "image": "image",
+  "@image": {
+    "description": "Auto extracted: image"
+  },
+  "reconfirm_your_identity_to_continue_using_face_id": "Reconfirm your identity to continue using Face ID.",
+  "@reconfirm_your_identity_to_continue_using_face_id": {
+    "description": "Auto extracted: Reconfirm your identity to continue using Face ID."
+  },
+  "we_only_retain_collected_information_for_as_long_a": "We only retain collected information for as long as necessary to provide you with your requested service.",
+  "@we_only_retain_collected_information_for_as_long_a": {
+    "description": "Auto extracted: We only retain collected information for as long as necessary to provide you with your requested service."
+  },
+  "sub_service": "Sub Service",
+  "@sub_service": {
+    "description": "Auto extracted: Sub Service"
+  },
+  "total_earnings": "Total Earnings",
+  "@total_earnings": {
+    "description": "Auto extracted: Total Earnings"
+  },
+  "s_3_data_protection": "3. Data Protection",
+  "@s_3_data_protection": {
+    "description": "Auto extracted: 3. Data Protection"
+  },
+  "s_1_month_ago": "1 month ago",
+  "@s_1_month_ago": {
+    "description": "Auto extracted: 1 month ago"
+  },
+  "terms_conditions": "Terms & Conditions",
+  "@terms_conditions": {
+    "description": "Auto extracted: Terms & Conditions"
+  },
+  "s_123456_1": "123456",
+  "@s_123456_1": {
+    "description": "Auto extracted: 123456"
+  },
+  "bob_marley": "Bob Marley",
+  "@bob_marley": {
+    "description": "Auto extracted: Bob Marley"
+  },
+  "refund_request_submitted": "Refund request submitted",
+  "@refund_request_submitted": {
+    "description": "Auto extracted: Refund request submitted"
+  },
+  "select_name": "Select Name",
+  "@select_name": {
+    "description": "Auto extracted: Select Name"
+  },
+  "bank_branch": "Bank Branch",
+  "@bank_branch": {
+    "description": "Auto extracted: Bank Branch"
+  },
+  "upload_picture": "Upload Picture",
+  "@upload_picture": {
+    "description": "Auto extracted: Upload Picture"
+  },
+  "service_1": "Service 1",
+  "@service_1": {
+    "description": "Auto extracted: Service 1"
+  },
+  "cassette_ac": "Cassette AC",
+  "@cassette_ac": {
+    "description": "Auto extracted: Cassette AC"
+  },
+  "select_service": "Select Service",
+  "@select_service": {
+    "description": "Auto extracted: Select Service"
+  },
+  "retry": "retry",
+  "@retry": {
+    "description": "Auto extracted: retry"
+  },
+  "geothermal_ac": "Geothermal AC",
+  "@geothermal_ac": {
+    "description": "Auto extracted: Geothermal AC"
+  },
+  "inverter_ac": "Inverter AC",
+  "@inverter_ac": {
+    "description": "Auto extracted: Inverter AC"
+  },
+  "camera": "Camera",
+  "@camera": {
+    "description": "Auto extracted: Camera"
+  },
+  "refresh_token_request_failed_with_status": "Refresh token request failed with status: ",
+  "@refresh_token_request_failed_with_status": {
+    "description": "Auto extracted: Refresh token request failed with status: "
+  },
+  "very_satisfied_with_the_ac_repair_it_s_working_lik": "Very satisfied with the AC repair. It's working like new now. Thank you!",
+  "@very_satisfied_with_the_ac_repair_it_s_working_lik": {
+    "description": "Auto extracted: Very satisfied with the AC repair. It's working like new now. Thank you!"
+  },
+  "s_50_000": "₫50,000",
+  "@s_50_000": {
+    "description": "Auto extracted: ₫50,000"
+  },
+  "enter_your_bank_name": "Enter your bank name",
+  "@enter_your_bank_name": {
+    "description": "Auto extracted: Enter your bank name"
+  },
+  "new_message": "New Message",
+  "@new_message": {
+    "description": "Auto extracted: New Message"
+  },
+  "add_service_1": "Add Service",
+  "@add_service_1": {
+    "description": "Auto extracted: Add Service"
+  },
+  "smart_ac": "Smart AC",
+  "@smart_ac": {
+    "description": "Auto extracted: Smart AC"
+  },
+  "enter_your_experience_here": "Enter your experience here...",
+  "@enter_your_experience_here": {
+    "description": "Auto extracted: Enter your experience here..."
+  },
+  "booking_confirmed": "Booking Confirmed",
+  "@booking_confirmed": {
+    "description": "Auto extracted: Booking Confirmed"
+  },
+  "time_2": "time",
+  "@time_2": {
+    "description": "Auto extracted: time"
+  },
+  "cancel_1": "cancel",
+  "@cancel_1": {
+    "description": "Auto extracted: cancel"
+  },
+  "face_id_status": "Face ID Status",
+  "@face_id_status": {
+    "description": "Auto extracted: Face ID Status"
+  },
+  "s_2_days_ago": "2 days ago",
+  "@s_2_days_ago": {
+    "description": "Auto extracted: 2 days ago"
+  },
+  "s_2_user_obligations": "2. User Obligations",
+  "@s_2_user_obligations": {
+    "description": "Auto extracted: 2. User Obligations"
+  },
+  "authorization": "Authorization",
+  "@authorization": {
+    "description": "Auto extracted: Authorization"
+  },
+  "bearer_refreshtoken": "Bearer $refreshToken",
+  "@bearer_refreshtoken": {
+    "description": "Auto extracted: Bearer $refreshToken"
+  },
+  "by_using_our_app_you_agree_to_comply_with_and_be_b": "By using our app, you agree to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this application.",
+  "@by_using_our_app_you_agree_to_comply_with_and_be_b": {
+    "description": "Auto extracted: By using our app, you agree to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this application."
+  },
+  "our_goal_is_simple_to_keep_your_space_cool_energy": "Our goal is simple — to keep your space cool, energy-efficient comfortable, and  all year round. We use proper tools, follow industry best practices, and pay attention to every detail to ensure your AC performs at its best.",
+  "@our_goal_is_simple_to_keep_your_space_cool_energy": {
+    "description": "Auto extracted: Our goal is simple — to keep your space cool, energy-efficient comfortable, and  all year round. We use proper tools, follow industry best practices, and pay attention to every detail to ensure your AC performs at its best."
+  },
+  "time_range": "Time Range",
+  "@time_range": {
+    "description": "Auto extracted: Time Range"
+  },
+  "bank_account_number": "Bank account number",
+  "@bank_account_number": {
+    "description": "Auto extracted: Bank account number"
+  },
+  "service_name": "Service Name",
+  "@service_name": {
+    "description": "Auto extracted: Service Name"
+  },
+  "bearer_newtoken": "Bearer $newToken",
+  "@bearer_newtoken": {
+    "description": "Auto extracted: Bearer $newToken"
+  },
+  "nid_or_driving_license": "NID or Driving license",
+  "@nid_or_driving_license": {
+    "description": "Auto extracted: NID or Driving license"
+  },
+  "how_was_your_experience": "How was your experience?",
+  "@how_was_your_experience": {
+    "description": "Auto extracted: How was your experience?"
+  },
+  "s_1_information_we_collect": "1. Information We Collect",
+  "@s_1_information_we_collect": {
+    "description": "Auto extracted: 1. Information We Collect"
+  },
+  "payment_successful": "Payment Successful",
+  "@payment_successful": {
+    "description": "Auto extracted: Payment Successful"
+  },
+  "withdraw": "Withdraw",
+  "@withdraw": {
+    "description": "Auto extracted: Withdraw"
+  },
+  "yesterday": "Yesterday",
+  "@yesterday": {
+    "description": "Auto extracted: Yesterday"
+  },
+  "enter_your_company_name": "Enter your company name",
+  "@enter_your_company_name": {
+    "description": "Auto extracted: Enter your company name"
+  },
+  "you_have_a_new_message_from_the_service_provider": "You have a new message from the service provider.",
+  "@you_have_a_new_message_from_the_service_provider": {
+    "description": "Auto extracted: You have a new message from the service provider."
+  },
+  "office_cleaning": "Office Cleaning",
+  "@office_cleaning": {
+    "description": "Auto extracted: Office Cleaning"
+  },
+  "your_booking_for_ac_repair_has_been_confirmed_by_t": "Your booking for AC repair has been confirmed by the provider.",
+  "@your_booking_for_ac_repair_has_been_confirmed_by_t": {
+    "description": "Auto extracted: Your booking for AC repair has been confirmed by the provider."
+  },
+  "s_2_weeks_ago": "2 weeks ago",
+  "@s_2_weeks_ago": {
+    "description": "Auto extracted: 2 weeks ago"
+  },
+  "customer_reviews": "Customer Reviews",
+  "@customer_reviews": {
+    "description": "Auto extracted: Customer Reviews"
+  },
+  "approved_1": "Approved",
+  "@approved_1": {
+    "description": "Auto extracted: Approved"
+  },
+  "s_1_acceptance_of_terms": "1. Acceptance of Terms",
+  "@s_1_acceptance_of_terms": {
+    "description": "Auto extracted: 1. Acceptance of Terms"
+  },
+  "experience": "Experience",
+  "@experience": {
+    "description": "Auto extracted: Experience"
+  },
+  "portable_ac": "Portable AC",
+  "@portable_ac": {
+    "description": "Auto extracted: Portable AC"
+  },
+  "service_image": "Service Image",
+  "@service_image": {
+    "description": "Auto extracted: Service Image"
+  },
+  "split_ac": "Split AC",
+  "@split_ac": {
+    "description": "Auto extracted: Split AC"
+  },
+  "packaged_ac": "Packaged AC",
+  "@packaged_ac": {
+    "description": "Auto extracted: Packaged AC"
+  },
+  "my_service": "My Service",
+  "@my_service": {
+    "description": "Auto extracted: My Service"
+  },
+  "s_5_00": "₫5,00",
+  "@s_5_00": {
+    "description": "Auto extracted: ₫5,00"
+  },
+  "floor_standing_ac": "Floor Standing AC",
+  "@floor_standing_ac": {
+    "description": "Auto extracted: Floor Standing AC"
+  },
+  "reject": "Reject",
+  "@reject": {
+    "description": "Auto extracted: Reject"
+  },
+  "whether_it_s_a_new_installation_or_an_urgent_repai": "Whether it’s a new installation or an urgent repair, you can count on us for fast response, honest service, and lasting results.",
+  "@whether_it_s_a_new_installation_or_an_urgent_repai": {
+    "description": "Auto extracted: Whether it’s a new installation or an urgent repair, you can count on us for fast response, honest service, and lasting results."
+  },
+  "no_choosen_file": "No Choosen File",
+  "@no_choosen_file": {
+    "description": "Auto extracted: No Choosen File"
+  },
+  "choose_file": "Choose file",
+  "@choose_file": {
+    "description": "Auto extracted: Choose file"
+  },
+  "choose_language": "Choose Language",
+  "@choose_language": {
+    "description": "Auto extracted: Choose Language"
+  },
+  "s_10_jan_2026_9_00_am": "10 jan 2026 / 9:00 am",
+  "@s_10_jan_2026_9_00_am": {
+    "description": "Auto extracted: 10 jan 2026 / 9:00 am"
+  },
+  "subtitle": "subtitle",
+  "@subtitle": {
+    "description": "Auto extracted: subtitle"
+  },
+  "enter_issue_here": "Enter issue here...",
+  "@enter_issue_here": {
+    "description": "Auto extracted: Enter issue here..."
+  },
+  "data": "data",
+  "@data": {
+    "description": "Auto extracted: data"
+  },
+  "eva_longoria": "Eva Longoria",
+  "@eva_longoria": {
+    "description": "Auto extracted: Eva Longoria"
+  },
+  "enter_your_vat_number": "Enter your VAT Number",
+  "@enter_your_vat_number": {
+    "description": "Auto extracted: Enter your VAT Number"
+  },
+  "gallery": "Gallery",
+  "@gallery": {
+    "description": "Auto extracted: Gallery"
+  },
+  "jone_cooper": "Jone Cooper",
+  "@jone_cooper": {
+    "description": "Auto extracted: Jone Cooper"
+  },
+  "bank_name": "Bank Name",
+  "@bank_name": {
+    "description": "Auto extracted: Bank Name"
+  },
+  "upload_image": "Upload Image",
+  "@upload_image": {
+    "description": "Auto extracted: Upload Image"
+  },
+  "enter_your_bank_account_number": "Enter your bank account number",
+  "@enter_your_bank_account_number": {
+    "description": "Auto extracted: Enter your bank account number"
+  },
+  "aircon_types": "Aircon Types",
+  "@aircon_types": {
+    "description": "Auto extracted: Aircon Types"
+  },
+  "face_id_1": "Face ID ",
+  "@face_id_1": {
+    "description": "Auto extracted: Face ID "
+  },
+  "we_protect_the_data_we_store_within_commercially_a": "We protect the data we store within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use, or modification.",
+  "@we_protect_the_data_we_store_within_commercially_a": {
+    "description": "Auto extracted: We protect the data we store within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use, or modification."
+  },
+  "title": "title",
+  "@title": {
+    "description": "Auto extracted: title"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "Auto extracted: Notifications"
+  },
+  "email_or_phone_number": "Email or phone number",
+  "@email_or_phone_number": {
+    "description": "Auto extracted: Email or phone number"
+  },
+  "good_quality_work_but_slightly_expensive_compared": "Good quality work, but slightly expensive compared to others. However, the result was worth it.",
+  "@good_quality_work_but_slightly_expensive_compared": {
+    "description": "Auto extracted: Good quality work, but slightly expensive compared to others. However, the result was worth it."
+  },
+  "s_5_0": "5.0",
+  "@s_5_0": {
+    "description": "Auto extracted: 5.0"
+  },
+  "hybrid_ac": "Hybrid AC",
+  "@hybrid_ac": {
+    "description": "Auto extracted: Hybrid AC"
+  },
+  "s_123458": "123458",
+  "@s_123458": {
+    "description": "Auto extracted: 123458"
+  },
+  "central_ac": "Central AC",
+  "@central_ac": {
+    "description": "Auto extracted: Central AC"
+  },
+  "write_review": "Write Review",
+  "@write_review": {
+    "description": "Auto extracted: Write Review"
+  },
+  "excellent_service_the_technician_was_professional": "Excellent service! The technician was professional and arrived on time. Highly recommended.",
+  "@excellent_service_the_technician_was_professional": {
+    "description": "Auto extracted: Excellent service! The technician was professional and arrived on time. Highly recommended."
+  },
+  "error_picking_image_e": "Error picking image: $e",
+  "@error_picking_image_e": {
+    "description": "Auto extracted: Error picking image: $e"
+  },
+  "my_earnings": "My Earnings",
+  "@my_earnings": {
+    "description": "Auto extracted: My Earnings"
+  },
+  "alice_freeman": "Alice Freeman",
+  "@alice_freeman": {
+    "description": "Auto extracted: Alice Freeman"
+  },
+  "your_access_to_and_use_of_the_service_is_condition": "Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.",
+  "@your_access_to_and_use_of_the_service_is_condition": {
+    "description": "Auto extracted: Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service."
+  },
+  "submit_review": "Submit Review",
+  "@submit_review": {
+    "description": "Auto extracted: Submit Review"
+  },
+  "service_type": "Service Type",
+  "@service_type": {
+    "description": "Auto extracted: Service Type"
+  },
+  "write_issue": "Write Issue",
+  "@write_issue": {
+    "description": "Auto extracted: Write Issue"
+  },
+  "available_balance": "Available Balance",
+  "@available_balance": {
+    "description": "Auto extracted: Available Balance"
+  },
+  "s_2_mins_ago": "2 mins ago",
+  "@s_2_mins_ago": {
+    "description": "Auto extracted: 2 mins ago"
+  },
+  "david_beckham": "David Beckham",
+  "@david_beckham": {
+    "description": "Auto extracted: David Beckham"
+  },
+  "s_2_months_ago": "2 months ago",
+  "@s_2_months_ago": {
+    "description": "Auto extracted: 2 months ago"
+  },
+  "resend": " Resend",
+  "@resend": {
+    "description": "Auto extracted:  Resend"
+  },
+  "service_2": "service 2",
+  "@service_2": {
+    "description": "Auto extracted: service 2"
+  },
+  "face_id_login": "Face ID Login",
+  "@face_id_login": {
+    "description": "Auto extracted: Face ID Login"
+  },
+  "rumi_aktar": "Rumi Aktar",
+  "@rumi_aktar": {
+    "description": "Auto extracted: Rumi Aktar"
+  },
+  "s_123457": "123457",
+  "@s_123457": {
+    "description": "Auto extracted: 123457"
+  },
+  "description": "Description",
+  "@description": {
+    "description": "Auto extracted: Description"
+  },
+  "the_service_has_been_marked_as_completed_please_le": "The service has been marked as completed. Please leave a review.",
+  "@the_service_has_been_marked_as_completed_please_le": {
+    "description": "Auto extracted: The service has been marked as completed. Please leave a review."
+  }
+}
