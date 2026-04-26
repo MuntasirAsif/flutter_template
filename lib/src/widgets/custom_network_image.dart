@@ -3,8 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/gen/assets.gen.dart';
-
 class CustomNetworkImage extends StatelessWidget {
   final String imageUrl;
   final double height;
@@ -63,11 +61,15 @@ class CustomNetworkImage extends StatelessWidget {
               Container(
                 height: height,
                 width: width,
+                padding: EdgeInsets.all(8.r),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(radius.r),
-                  image: DecorationImage(
-                    image: Assets.images.logo.provider(),
-                    fit: BoxFit.cover,
+                  color: Colors.grey.shade200,
+                ),
+                child: Center(
+                  child: Icon(
+                    Icons.image_not_supported,
+                    color: Colors.grey[400],
                   ),
                 ),
               );

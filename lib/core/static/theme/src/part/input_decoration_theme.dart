@@ -9,7 +9,7 @@ class _InputDecorationLightTheme with ThemeExtensions {
     return InputDecorationTheme(
       hintStyle: textStyle.bodyLarge.copyWith(color: lightColor.text.secondary),
       filled: true,
-      fillColor: lightColor.onPrimary,
+      fillColor: lightColor.textFieldFillColor,
       contentPadding: EdgeInsets.symmetric(
         vertical: dimensions.spacing.s12,
         horizontal: dimensions.spacing.s16,
@@ -18,12 +18,26 @@ class _InputDecorationLightTheme with ThemeExtensions {
       enabledBorder: OutlineInputBorder(
         borderRadius: borderRadius,
         borderSide: BorderSide(
-          color: lightColor.border,
+          color: lightColor.textFieldBorderColor,
           width: dimensions.spacing.s2,
         ),
       ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: borderRadius,
+        borderSide: BorderSide(
+          color: lightColor.textFieldFocusBorderColor,
+          width: dimensions.spacing.s2,
+        ),
+      ),
+
       suffixIconColor: lightColor.icon,
-      disabledBorder: OutlineInputBorder(borderRadius: borderRadius),
+      disabledBorder: OutlineInputBorder(
+        borderRadius: borderRadius,
+        borderSide: BorderSide(
+          color: lightColor.border.withValues(alpha: 0.5),
+          width: dimensions.spacing.s2,
+        ),
+      ),
     );
   }
 }

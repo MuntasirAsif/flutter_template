@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/core/theme/part/app_bar_theme.dart';
+import 'part/app_bar_theme.dart';
 
 class AppTheme {
   static final lightAppTheme = ThemeData(

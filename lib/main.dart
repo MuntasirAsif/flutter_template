@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 import 'core/gen/l10n/app_localizations.dart';
 import 'core/providers/language_provider.dart';
 import 'core/routes/part_of.dart';
@@ -27,9 +26,7 @@ void main() async {
     ),
   );
 
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(
     ProviderScope(
@@ -53,7 +50,7 @@ class MyApp extends ConsumerWidget {
       ensureScreenSize: true,
       builder: (context, child) {
         return MaterialApp.router(
-          title: 'VEZY',
+          title: 'App Name',
           locale: locale,
           supportedLocales: S.supportedLocales,
           localizationsDelegates: S.localizationsDelegates,

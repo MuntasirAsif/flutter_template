@@ -19,6 +19,10 @@ class ColorExtension {
     required this.pageView,
     required this.text,
     required this.secondary,
+    required this.textFieldFillColor,
+    required this.textFieldBorderColor,
+    required this.textFieldFocusBorderColor,
+    required this.accent,
   });
 
   final Color border;
@@ -34,11 +38,15 @@ class ColorExtension {
   final Color disabled;
   final Color active;
   final Color inactive;
+  final Color textFieldFillColor;
+  final Color textFieldBorderColor;
+  final Color textFieldFocusBorderColor;
 
   final AppBarColors appBar;
   final BottomNavBarColors bottomNavBar;
   final PageViewColors pageView;
   final TextColors text;
+  final AccentColors accent;
 }
 
 class LightColorExtension extends ThemeExtension<LightColorExtension>
@@ -48,7 +56,7 @@ class LightColorExtension extends ThemeExtension<LightColorExtension>
     this.icon = _Primitive.neutral40,
     this.onPrimary = _Primitive.neutral0,
     this.primary = _Primitive.brand,
-    this.scaffoldBackground = _Primitive.neutral0,
+    this.scaffoldBackground = _Primitive.scaffoldColor,
     this.success = _Primitive.success,
     this.error = _Primitive.error,
     this.warning = _Primitive.warning,
@@ -61,6 +69,10 @@ class LightColorExtension extends ThemeExtension<LightColorExtension>
     this.pageView = const _LightPageViewColors(),
     this.text = const _LightTextColors(),
     this.secondary = _Primitive.brandLight,
+    this.textFieldFillColor = _Primitive.textFieldFillColor,
+    this.textFieldBorderColor = _Primitive.textFieldBorderColor,
+    this.textFieldFocusBorderColor = _Primitive.textFieldFocusBorderColor,
+    this.accent = const _LightAccentColors(),
   });
 
   @override
@@ -93,10 +105,19 @@ class LightColorExtension extends ThemeExtension<LightColorExtension>
   final TextColors text;
 
   @override
+  final AccentColors accent;
+
+  @override
   final Color success;
 
   @override
   final Color error;
+
+  @override
+  final Color textFieldFillColor;
+
+  @override
+  final Color textFieldBorderColor;
 
   @override
   final Color warning;
@@ -112,6 +133,9 @@ class LightColorExtension extends ThemeExtension<LightColorExtension>
 
   @override
   final Color inactive;
+
+  @override
+  final Color textFieldFocusBorderColor;
 
   @override
   LightColorExtension copyWith({
@@ -131,6 +155,10 @@ class LightColorExtension extends ThemeExtension<LightColorExtension>
     BottomNavBarColors? bottomNavBar,
     PageViewColors? pageView,
     TextColors? text,
+    AccentColors? accent,
+    Color? textFieldFillColor,
+    Color? textFieldBorderColor,
+    Color? textFieldFocusBorderColor,
   }) {
     return LightColorExtension(
       border: border ?? this.border,
@@ -149,6 +177,11 @@ class LightColorExtension extends ThemeExtension<LightColorExtension>
       bottomNavBar: bottomNavBar ?? this.bottomNavBar,
       pageView: pageView ?? this.pageView,
       text: text ?? this.text,
+      accent: accent ?? this.accent,
+      textFieldFillColor: textFieldFillColor ?? this.textFieldFillColor,
+      textFieldBorderColor: textFieldBorderColor ?? this.textFieldBorderColor,
+      textFieldFocusBorderColor:
+          textFieldFocusBorderColor ?? this.textFieldFocusBorderColor,
     );
   }
 
@@ -184,6 +217,22 @@ class LightColorExtension extends ThemeExtension<LightColorExtension>
       bottomNavBar: t < 0.5 ? bottomNavBar : other.bottomNavBar,
       pageView: t < 0.5 ? pageView : other.pageView,
       text: t < 0.5 ? text : other.text,
+      accent: t < 0.5 ? accent : other.accent,
+      textFieldFillColor: Color.lerp(
+        textFieldFillColor,
+        other.textFieldFillColor,
+        t,
+      )!,
+      textFieldBorderColor: Color.lerp(
+        textFieldBorderColor,
+        other.textFieldBorderColor,
+        t,
+      )!,
+      textFieldFocusBorderColor: Color.lerp(
+        textFieldFocusBorderColor,
+        other.textFieldFocusBorderColor,
+        t,
+      )!,
     );
   }
 }
@@ -208,6 +257,10 @@ class DarkColorExtension extends ThemeExtension<DarkColorExtension>
     this.pageView = const _DarkPageViewColors(),
     this.text = const _DarkTextColors(),
     this.secondary = _Primitive.brandLight,
+    this.textFieldFillColor = _Primitive.textFieldFillColor,
+    this.textFieldBorderColor = _Primitive.textFieldBorderColor,
+    this.textFieldFocusBorderColor = _Primitive.textFieldFocusBorderColor,
+    this.accent = const _DarkAccentColors(),
   });
 
   @override
@@ -241,6 +294,9 @@ class DarkColorExtension extends ThemeExtension<DarkColorExtension>
   final TextColors text;
 
   @override
+  final AccentColors accent;
+
+  @override
   final Color success;
 
   @override
@@ -262,6 +318,15 @@ class DarkColorExtension extends ThemeExtension<DarkColorExtension>
   final Color inactive;
 
   @override
+  final Color textFieldFillColor;
+
+  @override
+  final Color textFieldBorderColor;
+
+  @override
+  final Color textFieldFocusBorderColor;
+
+  @override
   DarkColorExtension copyWith({
     Color? border,
     Color? icon,
@@ -279,6 +344,10 @@ class DarkColorExtension extends ThemeExtension<DarkColorExtension>
     BottomNavBarColors? bottomNavBar,
     PageViewColors? pageView,
     TextColors? text,
+    AccentColors? accent,
+    Color? textFieldFillColor,
+    Color? textFieldBorderColor,
+    Color? textFieldFocusBorderColor,
   }) {
     return DarkColorExtension(
       border: border ?? this.border,
@@ -297,6 +366,11 @@ class DarkColorExtension extends ThemeExtension<DarkColorExtension>
       bottomNavBar: bottomNavBar ?? this.bottomNavBar,
       pageView: pageView ?? this.pageView,
       text: text ?? this.text,
+      accent: accent ?? this.accent,
+      textFieldFillColor: textFieldFillColor ?? this.textFieldFillColor,
+      textFieldBorderColor: textFieldBorderColor ?? this.textFieldBorderColor,
+      textFieldFocusBorderColor:
+          textFieldFocusBorderColor ?? this.textFieldFocusBorderColor,
     );
   }
 
@@ -331,6 +405,22 @@ class DarkColorExtension extends ThemeExtension<DarkColorExtension>
       bottomNavBar: t < 0.5 ? bottomNavBar : other.bottomNavBar,
       pageView: t < 0.5 ? pageView : other.pageView,
       text: t < 0.5 ? text : other.text,
+      accent: t < 0.5 ? accent : other.accent,
+      textFieldFillColor: Color.lerp(
+        textFieldFillColor,
+        other.textFieldFillColor,
+        t,
+      )!,
+      textFieldBorderColor: Color.lerp(
+        textFieldBorderColor,
+        other.textFieldBorderColor,
+        t,
+      )!,
+      textFieldFocusBorderColor: Color.lerp(
+        textFieldFocusBorderColor,
+        other.textFieldFocusBorderColor,
+        t,
+      )!,
     );
   }
 }

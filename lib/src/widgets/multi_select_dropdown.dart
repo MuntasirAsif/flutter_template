@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 
+
 class MultiSelectDropdown extends StatefulWidget {
   final List<String> items;
   final List<String> selectedItems;
@@ -28,9 +29,17 @@ class _MultiSelectDropdownState extends State<MultiSelectDropdown> {
     _selectedItems = List.from(widget.selectedItems);
   }
 
-  void _onItemTapped(String item, bool isSelected) {
+  @override
+  void didUpdateWidget(covariant MultiSelectDropdown oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.selectedItems != oldWidget.selectedItems) {
+      _selectedItems = List.from(widget.selectedItems);
+    }
+  }
+
+  void _onItemTapped(String item) {
     setState(() {
-      if (isSelected) {
+      if (_selectedItems.contains(item)) {
         _selectedItems.remove(item);
       } else {
         _selectedItems.add(item);
@@ -44,15 +53,19 @@ class _MultiSelectDropdownState extends State<MultiSelectDropdown> {
   Widget build(BuildContext context) {
     return DropdownButtonHideUnderline(
       child: DropdownButton2<String>(
+        key: ValueKey(_selectedItems.length), // 🔥 force rebuild
+
         isExpanded: true,
 
-        hint: Text(
-          widget.hint,
-          style: TextStyle(fontSize: 14, color: Theme.of(context).hintColor),
-        ),
+        // 👇 important fix for text update
+        onChanged: (value) {
+          _selectedItems.add(value!);
+        },
+
+        hint: Text(widget.hint),
 
         items: widget.items.map((item) {
-          return DropdownMenuItem<String>(
+          return DropdownItem<String>(
             value: item,
             enabled: false,
             child: StatefulBuilder(
@@ -61,20 +74,22 @@ class _MultiSelectDropdownState extends State<MultiSelectDropdown> {
 
                 return InkWell(
                   onTap: () {
-                    _onItemTapped(item, isSelected);
+                    _onItemTapped(item);
                     menuSetState(() {});
                   },
-                  child: Row(
-                    children: [
-                      Checkbox(
-                        value: isSelected,
-                        onChanged: (_) {
-                          _onItemTapped(item, isSelected);
-                          menuSetState(() {});
-                        },
-                      ),
-                      Expanded(child: Text(item)),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    child: Row(
+                      children: [
+                        Icon(
+                          isSelected
+                              ? Icons.check_box
+                              : Icons.check_box_outline_blank,
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(child: Text(item)),
+                      ],
+                    ),
                   ),
                 );
               },
@@ -82,38 +97,33 @@ class _MultiSelectDropdownState extends State<MultiSelectDropdown> {
           );
         }).toList(),
 
-        value: _selectedItems.isEmpty ? null : _selectedItems.last,
-
         selectedItemBuilder: (context) {
-          return widget.items.map((item) {
-            return Container(
+          return widget.items.map((_) {
+            return Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 _selectedItems.isEmpty
                     ? widget.hint
                     : _selectedItems.join(", "),
+                maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
             );
           }).toList();
         },
 
-        onChanged: (_) {},
-
         buttonStyleData: ButtonStyleData(
+          height: 50,
+          padding: const EdgeInsets.symmetric(horizontal: 14),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: Theme.of(context).colorScheme.onPrimary,
             border: Border.all(color: Colors.grey.shade300),
           ),
         ),
 
         dropdownStyleData: DropdownStyleData(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            color: Theme.of(context).colorScheme.onPrimary,
-            border: Border.all(color: Colors.grey.shade300),
-          ),
+          maxHeight: 250,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
         ),
       ),
     );
