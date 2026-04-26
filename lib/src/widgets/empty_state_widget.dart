@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 // ══════════════════════════════════════════════════════════════════
-//  EmptyStateWidget  —  fully customisable animated empty state
+//  EmptyStateWidget  —  fully customizable animated empty state
 //
 //  Every visual element can be:
 //    • shown / hidden via a show* bool
@@ -11,7 +11,7 @@ import 'dart:math' as math;
 //  Minimal usage (all defaults):
 //    EmptyStateWidget()
 //
-//  Full customisation example:
+//  Full customization example:
 //    EmptyStateWidget(
 //      // ── visibility toggles ────────────────────────────────────
 //      showIcon:          true,
