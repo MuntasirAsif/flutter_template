@@ -1,5 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../core/static/theme/theme.dart';
 
 typedef Validator = String? Function(String value);
 
@@ -10,6 +13,9 @@ class AppTextField extends StatefulWidget {
   final String? hintText;
   final String? labelText;
 
+  final String? label;
+  final bool showLabel;
+
   final Widget? prefixIcon;
   final Widget? suffixIcon;
 
@@ -17,6 +23,7 @@ class AppTextField extends StatefulWidget {
   final bool enableToggleObscure;
   final Widget? obscureIcon;
   final Widget? obscureIconOff;
+  final Color? fillColor;
 
   final TextInputType keyboardType;
   final TextInputAction? textInputAction;
@@ -41,7 +48,10 @@ class AppTextField extends StatefulWidget {
     this.validator,
     this.hintText,
     this.labelText,
+    this.label,
+    this.showLabel = true,
     this.prefixIcon,
+    this.fillColor,
     this.suffixIcon,
     this.obscureText = false,
     this.enableToggleObscure = false,
@@ -87,46 +97,13 @@ class _AppTextFieldState extends State<AppTextField>
     // shake animation controller
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 250),
     );
 
-    _offset = TweenSequence<double>([
-      TweenSequenceItem(
-        tween: Tween(
-          begin: 0.0,
-          end: 8.0,
-        ).chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 1,
-      ),
-      TweenSequenceItem(
-        tween: Tween(
-          begin: 8.0,
-          end: -8.0,
-        ).chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 2,
-      ),
-      TweenSequenceItem(
-        tween: Tween(
-          begin: -8.0,
-          end: 8.0,
-        ).chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 2,
-      ),
-      TweenSequenceItem(
-        tween: Tween(
-          begin: 8.0,
-          end: -8.0,
-        ).chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 2,
-      ),
-      TweenSequenceItem(
-        tween: Tween(
-          begin: -8.0,
-          end: 0.0,
-        ).chain(CurveTween(curve: Curves.easeInOut)),
-        weight: 1,
-      ),
-    ]).animate(_controller);
+    _offset = Tween<double>(
+      begin: 0,
+      end: 6,
+    ).chain(CurveTween(curve: Curves.elasticIn)).animate(_controller);
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _validate(widget.controller.text);
@@ -178,18 +155,6 @@ class _AppTextFieldState extends State<AppTextField>
   }
 
   @override
-  void didUpdateWidget(AppTextField oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (oldWidget.controller != widget.controller) {
-      oldWidget.controller.removeListener(_onChanged);
-      widget.controller.addListener(_onChanged);
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        _validate(widget.controller.text);
-      });
-    }
-  }
-
-  @override
   void dispose() {
     widget.controller.removeListener(_onChanged);
     _debounce?.cancel();
@@ -199,71 +164,58 @@ class _AppTextFieldState extends State<AppTextField>
 
   @override
   Widget build(BuildContext context) {
-    return FormField<String>(
-      initialValue: widget.controller.text,
-      validator: (value) {
-        if (widget.validator == null) return null;
+    final field = AnimatedBuilder(
+      animation: _offset,
+      builder: (context, child) {
+        return Transform.translate(
+          offset: Offset(_offset.value, 0),
+          child: TextField(
+            controller: widget.controller,
+            focusNode: widget.focusNode,
+            obscureText: _obscure,
+            keyboardType: widget.keyboardType,
+            textInputAction: widget.textInputAction,
+            maxLines: widget.maxLines,
+            maxLength: widget.maxLength,
+            enabled: widget.enabled,
+            readOnly: widget.readOnly,
+            onTap: widget.onTap,
+            onSubmitted: widget.onSubmitted,
 
-        final val = value ?? '';
-        final result = widget.validator!(val);
-
-        if (errorText != result) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            if (mounted) setState(() => errorText = result);
-          });
-        }
-
-        if (result != null) {
-          _triggerShake();
-        }
-        return result;
-      },
-      builder: (field) {
-        return AnimatedBuilder(
-          animation: _offset,
-          builder: (context, child) {
-            return Transform.translate(
-              offset: Offset(_offset.value, 0),
-              child: TextField(
-                controller: widget.controller,
-                focusNode: widget.focusNode,
-                obscureText: _obscure,
-                keyboardType: widget.keyboardType,
-                textInputAction: widget.textInputAction,
-                maxLines: widget.maxLines,
-                maxLength: widget.maxLength,
-                enabled: widget.enabled,
-                readOnly: widget.readOnly,
-                onTap: widget.onTap,
-                onChanged: (value) {
-                  field.didChange(value);
-                  widget.onChanged?.call(value);
-                },
-                onSubmitted: widget.onSubmitted,
-                decoration: InputDecoration(
-                  hintText: widget.hintText,
-                  labelText: widget.labelText,
-                  errorText: errorText,
-                  prefixIcon: widget.prefixIcon,
-                  suffixIcon: widget.enableToggleObscure
-                      ? IconButton(
-                          onPressed: _toggleVisibility,
-                          icon: _obscure
-                              ? (widget.obscureIconOff ??
-                                    const Icon(Icons.visibility_off))
-                              : (widget.obscureIcon ??
-                                    const Icon(Icons.visibility)),
-                        )
-                      : widget.suffixIcon,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
+            decoration: InputDecoration(
+              fillColor: widget.fillColor ?? context.color.textFieldFillColor,
+              hintText: widget.hintText,
+              labelText: widget.labelText,
+              errorText: errorText,
+              prefixIcon: widget.prefixIcon,
+              suffixIcon: widget.enableToggleObscure
+                  ? IconButton(
+                      onPressed: _toggleVisibility,
+                      icon: _obscure
+                          ? (widget.obscureIconOff ??
+                                const Icon(Icons.visibility_off))
+                          : (widget.obscureIcon ??
+                                const Icon(Icons.visibility)),
+                    )
+                  : widget.suffixIcon,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
               ),
-            );
-          },
+            ),
+          ),
         );
       },
+    );
+
+    if (widget.label == null || !widget.showLabel) return field;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(widget.label!, style: context.textStyle.bodyMedium),
+        SizedBox(height: 8.h),
+        field,
+      ],
     );
   }
 }
