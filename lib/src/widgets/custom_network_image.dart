@@ -2,6 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../core/static/theme/theme.dart';
 
 class CustomNetworkImage extends StatelessWidget {
   final String imageUrl;
@@ -11,6 +14,7 @@ class CustomNetworkImage extends StatelessWidget {
   final Widget? placeholder;
   final Widget? errorWidget;
   final bool isLoading;
+  final bool? isPerson;
 
   const CustomNetworkImage({
     super.key,
@@ -21,6 +25,7 @@ class CustomNetworkImage extends StatelessWidget {
     this.placeholder,
     this.errorWidget,
     this.isLoading = false,
+    this.isPerson = false,
   });
 
   @override
@@ -64,12 +69,15 @@ class CustomNetworkImage extends StatelessWidget {
                 padding: EdgeInsets.all(8.r),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(radius.r),
-                  color: Colors.grey.shade200,
+                  color: context.color.primary.withValues(alpha: 0.1),
                 ),
                 child: Center(
-                  child: Icon(
-                    Icons.image_not_supported,
-                    color: Colors.grey[400],
+                  child: FaIcon(
+                    isPerson == true
+                        ? FontAwesomeIcons.user
+                        : FontAwesomeIcons.image,
+                    size: 24.sp,
+                    color: context.color.primary,
                   ),
                 ),
               );

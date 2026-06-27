@@ -87,13 +87,46 @@ class _AppTextFieldState extends State<AppTextField>
     // shake animation controller
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 400),
     );
 
-    _offset = Tween<double>(
-      begin: 0,
-      end: 6,
-    ).chain(CurveTween(curve: Curves.elasticIn)).animate(_controller);
+    _offset = TweenSequence<double>([
+      TweenSequenceItem(
+        tween: Tween(
+          begin: 0.0,
+          end: 8.0,
+        ).chain(CurveTween(curve: Curves.easeInOut)),
+        weight: 1,
+      ),
+      TweenSequenceItem(
+        tween: Tween(
+          begin: 8.0,
+          end: -8.0,
+        ).chain(CurveTween(curve: Curves.easeInOut)),
+        weight: 2,
+      ),
+      TweenSequenceItem(
+        tween: Tween(
+          begin: -8.0,
+          end: 8.0,
+        ).chain(CurveTween(curve: Curves.easeInOut)),
+        weight: 2,
+      ),
+      TweenSequenceItem(
+        tween: Tween(
+          begin: 8.0,
+          end: -8.0,
+        ).chain(CurveTween(curve: Curves.easeInOut)),
+        weight: 2,
+      ),
+      TweenSequenceItem(
+        tween: Tween(
+          begin: -8.0,
+          end: 0.0,
+        ).chain(CurveTween(curve: Curves.easeInOut)),
+        weight: 1,
+      ),
+    ]).animate(_controller);
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _validate(widget.controller.text);
@@ -145,6 +178,18 @@ class _AppTextFieldState extends State<AppTextField>
   }
 
   @override
+  void didUpdateWidget(AppTextField oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.controller != widget.controller) {
+      oldWidget.controller.removeListener(_onChanged);
+      widget.controller.addListener(_onChanged);
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _validate(widget.controller.text);
+      });
+    }
+  }
+
+  @override
   void dispose() {
     widget.controller.removeListener(_onChanged);
     _debounce?.cancel();
@@ -154,43 +199,69 @@ class _AppTextFieldState extends State<AppTextField>
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _offset,
-      builder: (context, child) {
-        return Transform.translate(
-          offset: Offset(_offset.value, 0),
-          child: TextField(
-            controller: widget.controller,
-            focusNode: widget.focusNode,
-            obscureText: _obscure,
-            keyboardType: widget.keyboardType,
-            textInputAction: widget.textInputAction,
-            maxLines: widget.maxLines,
-            maxLength: widget.maxLength,
-            enabled: widget.enabled,
-            readOnly: widget.readOnly,
-            onTap: widget.onTap,
-            onSubmitted: widget.onSubmitted,
-            decoration: InputDecoration(
-              hintText: widget.hintText,
-              labelText: widget.labelText,
-              errorText: errorText,
-              prefixIcon: widget.prefixIcon,
-              suffixIcon: widget.enableToggleObscure
-                  ? IconButton(
-                      onPressed: _toggleVisibility,
-                      icon: _obscure
-                          ? (widget.obscureIconOff ??
-                                const Icon(Icons.visibility_off))
-                          : (widget.obscureIcon ??
-                                const Icon(Icons.visibility)),
-                    )
-                  : widget.suffixIcon,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
+    return FormField<String>(
+      initialValue: widget.controller.text,
+      validator: (value) {
+        if (widget.validator == null) return null;
+
+        final val = value ?? '';
+        final result = widget.validator!(val);
+
+        if (errorText != result) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (mounted) setState(() => errorText = result);
+          });
+        }
+
+        if (result != null) {
+          _triggerShake();
+        }
+        return result;
+      },
+      builder: (field) {
+        return AnimatedBuilder(
+          animation: _offset,
+          builder: (context, child) {
+            return Transform.translate(
+              offset: Offset(_offset.value, 0),
+              child: TextField(
+                controller: widget.controller,
+                focusNode: widget.focusNode,
+                obscureText: _obscure,
+                keyboardType: widget.keyboardType,
+                textInputAction: widget.textInputAction,
+                maxLines: widget.maxLines,
+                maxLength: widget.maxLength,
+                enabled: widget.enabled,
+                readOnly: widget.readOnly,
+                onTap: widget.onTap,
+                onChanged: (value) {
+                  field.didChange(value);
+                  widget.onChanged?.call(value);
+                },
+                onSubmitted: widget.onSubmitted,
+                decoration: InputDecoration(
+                  hintText: widget.hintText,
+                  labelText: widget.labelText,
+                  errorText: errorText,
+                  prefixIcon: widget.prefixIcon,
+                  suffixIcon: widget.enableToggleObscure
+                      ? IconButton(
+                          onPressed: _toggleVisibility,
+                          icon: _obscure
+                              ? (widget.obscureIconOff ??
+                                    const Icon(Icons.visibility_off))
+                              : (widget.obscureIcon ??
+                                    const Icon(Icons.visibility)),
+                        )
+                      : widget.suffixIcon,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
               ),
-            ),
-          ),
+            );
+          },
         );
       },
     );
