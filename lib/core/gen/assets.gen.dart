@@ -9,105 +9,52 @@
 // ignore_for_file: type=lint
 // ignore_for_file: deprecated_member_use,directives_ordering,implicit_dynamic_list_literal,unnecessary_import
 
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart' as _svg;
-import 'package:vector_graphics/vector_graphics.dart' as _vg;
-
-class $LibGen {
-  const $LibGen();
-
-  /// Directory path: lib/core
-  $LibCoreGen get core => const $LibCoreGen();
-}
-
-class $AssetsEmojisGen {
-  const $AssetsEmojisGen();
-
-  /// File path: assets/emojis/anxious.svg
-  SvgGenImage get anxious => const SvgGenImage('assets/emojis/anxious.svg');
-
-  /// File path: assets/emojis/calm.svg
-  SvgGenImage get calm => const SvgGenImage('assets/emojis/calm.svg');
-
-  /// File path: assets/emojis/hopeful.svg
-  SvgGenImage get hopeful => const SvgGenImage('assets/emojis/hopeful.svg');
-
-  /// File path: assets/emojis/joyful.svg
-  SvgGenImage get joyful => const SvgGenImage('assets/emojis/joyful.svg');
-
-  /// File path: assets/emojis/neutral.svg
-  SvgGenImage get neutral => const SvgGenImage('assets/emojis/neutral.svg');
-
-  /// File path: assets/emojis/sad.svg
-  SvgGenImage get sad => const SvgGenImage('assets/emojis/sad.svg');
-
-  /// File path: assets/emojis/stressed.svg
-  SvgGenImage get stressed => const SvgGenImage('assets/emojis/stressed.svg');
-
-  /// File path: assets/emojis/tired.svg
-  SvgGenImage get tired => const SvgGenImage('assets/emojis/tired.svg');
-
-  /// List of all assets
-  List<SvgGenImage> get values => [
-    anxious,
-    calm,
-    hopeful,
-    joyful,
-    neutral,
-    sad,
-    stressed,
-    tired,
-  ];
-}
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   /// File path: assets/icons/book.svg
-  SvgGenImage get book => const SvgGenImage('assets/icons/book.svg');
+  String get book => 'assets/icons/book.svg';
 
   /// File path: assets/icons/crown.svg
-  SvgGenImage get crown => const SvgGenImage('assets/icons/crown.svg');
+  String get crown => 'assets/icons/crown.svg';
 
   /// File path: assets/icons/heart-outline.svg
-  SvgGenImage get heartOutline =>
-      const SvgGenImage('assets/icons/heart-outline.svg');
+  String get heartOutline => 'assets/icons/heart-outline.svg';
 
   /// File path: assets/icons/home.svg
-  SvgGenImage get home => const SvgGenImage('assets/icons/home.svg');
+  String get home => 'assets/icons/home.svg';
 
   /// File path: assets/icons/mental.svg
-  SvgGenImage get mental => const SvgGenImage('assets/icons/mental.svg');
+  String get mental => 'assets/icons/mental.svg';
 
   /// File path: assets/icons/notification.svg
-  SvgGenImage get notification =>
-      const SvgGenImage('assets/icons/notification.svg');
+  String get notification => 'assets/icons/notification.svg';
 
   /// File path: assets/icons/physical.svg
-  SvgGenImage get physical => const SvgGenImage('assets/icons/physical.svg');
+  String get physical => 'assets/icons/physical.svg';
 
   /// File path: assets/icons/quick_quiz.svg
-  SvgGenImage get quickQuiz => const SvgGenImage('assets/icons/quick_quiz.svg');
+  String get quickQuiz => 'assets/icons/quick_quiz.svg';
 
   /// File path: assets/icons/spiritual.svg
-  SvgGenImage get spiritual => const SvgGenImage('assets/icons/spiritual.svg');
+  String get spiritual => 'assets/icons/spiritual.svg';
 
   /// File path: assets/icons/study_material.svg
-  SvgGenImage get studyMaterial =>
-      const SvgGenImage('assets/icons/study_material.svg');
+  String get studyMaterial => 'assets/icons/study_material.svg';
 
   /// File path: assets/icons/task.svg
-  SvgGenImage get task => const SvgGenImage('assets/icons/task.svg');
+  String get task => 'assets/icons/task.svg';
 
   /// File path: assets/icons/user.svg
-  SvgGenImage get user => const SvgGenImage('assets/icons/user.svg');
+  String get user => 'assets/icons/user.svg';
 
   /// File path: assets/icons/user_group.svg
-  SvgGenImage get userGroup => const SvgGenImage('assets/icons/user_group.svg');
+  String get userGroup => 'assets/icons/user_group.svg';
 
   /// List of all assets
-  List<SvgGenImage> get values => [
+  List<String> get values => [
     book,
     crown,
     heartOutline,
@@ -127,15 +74,6 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/OB1.png
-  AssetGenImage get ob1 => const AssetGenImage('assets/images/OB1.png');
-
-  /// File path: assets/images/OB2.png
-  AssetGenImage get ob2 => const AssetGenImage('assets/images/OB2.png');
-
-  /// File path: assets/images/OB3.png
-  AssetGenImage get ob3 => const AssetGenImage('assets/images/OB3.png');
-
   /// File path: assets/images/app_icon.png
   AssetGenImage get appIcon =>
       const AssetGenImage('assets/images/app_icon.png');
@@ -143,61 +81,41 @@ class $AssetsImagesGen {
   /// File path: assets/images/google.png
   AssetGenImage get google => const AssetGenImage('assets/images/google.png');
 
-  /// List of all assets
-  List<AssetGenImage> get values => [ob1, ob2, ob3, appIcon, google];
-}
+  /// File path: assets/images/onboarding1.png
+  AssetGenImage get onboarding1 =>
+      const AssetGenImage('assets/images/onboarding1.png');
 
-class $LibCoreGen {
-  const $LibCoreGen();
+  /// File path: assets/images/onboarding2.png
+  AssetGenImage get onboarding2 =>
+      const AssetGenImage('assets/images/onboarding2.png');
 
-  /// Directory path: lib/core/gen
-  $LibCoreGenGen get gen => const $LibCoreGenGen();
-}
+  /// File path: assets/images/onboarding3.png
+  AssetGenImage get onboarding3 =>
+      const AssetGenImage('assets/images/onboarding3.png');
 
-class $LibCoreGenGen {
-  const $LibCoreGenGen();
+  /// File path: assets/images/splash_onboarding_background.png
+  AssetGenImage get splashOnboardingBackground =>
+      const AssetGenImage('assets/images/splash_onboarding_background.png');
 
-  /// Directory path: lib/core/gen/l10n
-  $LibCoreGenL10nGen get l10n => const $LibCoreGenL10nGen();
-}
-
-class $LibCoreGenL10nGen {
-  const $LibCoreGenL10nGen();
-
-  /// File path: lib/core/gen/l10n/app_en.arb
-  String get appEn => 'lib/core/gen/l10n/app_en.arb';
-
-  /// File path: lib/core/gen/l10n/app_localizations.dart
-  String get appLocalizations => 'lib/core/gen/l10n/app_localizations.dart';
-
-  /// File path: lib/core/gen/l10n/app_localizations_en.dart
-  String get appLocalizationsEn =>
-      'lib/core/gen/l10n/app_localizations_en.dart';
-
-  /// File path: lib/core/gen/l10n/app_localizations_vi.dart
-  String get appLocalizationsVi =>
-      'lib/core/gen/l10n/app_localizations_vi.dart';
-
-  /// File path: lib/core/gen/l10n/app_vi.arb
-  String get appVi => 'lib/core/gen/l10n/app_vi.arb';
+  /// File path: assets/images/splash_text.png
+  AssetGenImage get splashText =>
+      const AssetGenImage('assets/images/splash_text.png');
 
   /// List of all assets
-  List<String> get values => [
-    appEn,
-    appLocalizations,
-    appLocalizationsEn,
-    appLocalizationsVi,
-    appVi,
+  List<AssetGenImage> get values => [
+    appIcon,
+    google,
+    onboarding1,
+    onboarding2,
+    onboarding3,
+    splashOnboardingBackground,
+    splashText,
   ];
 }
 
-class Assets {
-  const Assets._();
-
-  static const $AssetsEmojisGen emojis = $AssetsEmojisGen();
+abstract final class Assets {
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
-  static const $LibGen lib = $LibGen();
 }
 
 class AssetGenImage {
@@ -286,78 +204,4 @@ class AssetGenImageAnimation {
   final bool isAnimation;
   final Duration duration;
   final int frames;
-}
-
-class SvgGenImage {
-  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}})
-    : _isVecFormat = false;
-
-  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}})
-    : _isVecFormat = true;
-
-  final String _assetName;
-  final Size? size;
-  final Set<String> flavors;
-  final bool _isVecFormat;
-
-  _svg.SvgPicture svg({
-    Key? key,
-    bool matchTextDirection = false,
-    AssetBundle? bundle,
-    String? package,
-    double? width,
-    double? height,
-    BoxFit fit = BoxFit.contain,
-    AlignmentGeometry alignment = Alignment.center,
-    bool allowDrawingOutsideViewBox = false,
-    WidgetBuilder? placeholderBuilder,
-    String? semanticsLabel,
-    bool excludeFromSemantics = false,
-    _svg.SvgTheme? theme,
-    _svg.ColorMapper? colorMapper,
-    ColorFilter? colorFilter,
-    Clip clipBehavior = Clip.hardEdge,
-    @deprecated Color? color,
-    @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
-    @deprecated bool cacheColorFilter = false,
-  }) {
-    final _svg.BytesLoader loader;
-    if (_isVecFormat) {
-      loader = _vg.AssetBytesLoader(
-        _assetName,
-        assetBundle: bundle,
-        packageName: package,
-      );
-    } else {
-      loader = _svg.SvgAssetLoader(
-        _assetName,
-        assetBundle: bundle,
-        packageName: package,
-        theme: theme,
-        colorMapper: colorMapper,
-      );
-    }
-    return _svg.SvgPicture(
-      loader,
-      key: key,
-      matchTextDirection: matchTextDirection,
-      width: width,
-      height: height,
-      fit: fit,
-      alignment: alignment,
-      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
-      placeholderBuilder: placeholderBuilder,
-      semanticsLabel: semanticsLabel,
-      excludeFromSemantics: excludeFromSemantics,
-      colorFilter:
-          colorFilter ??
-          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
-      clipBehavior: clipBehavior,
-      cacheColorFilter: cacheColorFilter,
-    );
-  }
-
-  String get path => _assetName;
-
-  String get keyName => _assetName;
 }

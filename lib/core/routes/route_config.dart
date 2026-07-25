@@ -10,6 +10,22 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: RouteConst.splash,
         pageBuilder: (context, state) => buildTransitionPage(
+          child: const SplashScreen(),
+          key: state.pageKey,
+          type: AppTransitionType.fade,
+        ),
+      ),
+      GoRoute(
+        path: RouteConst.onBoarding,
+        pageBuilder: (context, state) => buildTransitionPage(
+          child: const OnboardingScreen(),
+          key: state.pageKey,
+          type: AppTransitionType.fade,
+        ),
+      ),
+      GoRoute(
+        path: RouteConst.login,
+        pageBuilder: (context, state) => buildTransitionPage(
           child: const LoginScreen(),
           key: state.pageKey,
           type: AppTransitionType.fade,
