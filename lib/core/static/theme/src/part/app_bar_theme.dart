@@ -8,7 +8,7 @@ class _AppBarLightTheme with ThemeExtensions {
       centerTitle: true,
       backgroundColor: lightColor.appBar.background,
       surfaceTintColor: lightColor.appBar.surfaceTint,
-      titleTextStyle: textStyle.headingSmall.copyWith(
+      titleTextStyle: textStyle.headlineSmall.copyWith(
         color: lightColor.text.primary,
       ),
       iconTheme: IconThemeData(color: lightColor.appBar.icon),
@@ -24,7 +24,7 @@ class _AppBarDarkTheme with ThemeExtensions {
       centerTitle: true,
       backgroundColor: darkColor.appBar.background,
       surfaceTintColor: darkColor.appBar.surfaceTint,
-      titleTextStyle: textStyle.headingSmall.copyWith(
+      titleTextStyle: textStyle.headlineSmall.copyWith(
         color: darkColor.text.primary,
       ),
       iconTheme: IconThemeData(color: darkColor.appBar.icon),

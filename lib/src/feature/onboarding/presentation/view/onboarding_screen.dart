@@ -117,7 +117,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                           children: [
                             Text(
                               page.title,
-                              style: context.textStyle.headingLarge.copyWith(
+                              style: context.textStyle.headlineLarge.copyWith(
                                 color: context.color.primary,
                               ),
                               textAlign: TextAlign.center,

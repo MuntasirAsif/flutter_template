@@ -29,7 +29,7 @@ class LoginScreen extends StatelessWidget {
                     Center(
                       child: Text(
                         'Sign In',
-                        style: context.textStyle.headingLarge.copyWith(
+                        style: context.textStyle.headlineLarge.copyWith(
                           color: context.color.primary,
                         ),
                       ),

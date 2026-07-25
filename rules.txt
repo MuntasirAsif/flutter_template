@@ -719,3 +719,147 @@ When creating a new feature, create these files in order:
   - Implement proper error handling (don't expose stack traces)
   - Use Environment class for API URLs (dev/staging/prod)
   - Clear sensitive data on logout
+
+
+19. MANDATORY RULES (MUST FOLLOW)
+=================================
+
+STATE MANAGEMENT:
+  - MUST use Riverpod for all state management
+  - NEVER use setState() - always use StateNotifier/StateProvider
+  - All widgets that need state must be ConsumerWidget or ConsumerStatefulWidget
+  - Use ref.watch() for reactive state, ref.read() for one-time access
+
+CODE CLEANLINESS:
+  - Keep code clean and readable at all times
+  - Follow Dart effective style guide
+  - Use meaningful variable/function names
+  - Avoid magic numbers - use constants
+  - Remove unused imports and code
+  - Keep methods focused on single responsibility
+
+FILE ORGANIZATION:
+  - ViewModels/Controllers: feature/feature_name/presentation/view_model/
+  - Data layer (models, repos): feature/feature_name/data/
+  - Domain layer (interfaces): feature/feature_name/domain/
+  - Presentation layer: feature/feature_name/presentation/view/
+
+FILE SIZE LIMITS:
+  - MAX 150 lines per Dart file in src/feature/
+  - If file exceeds 150 lines, split into smaller files
+  - Exception: only break this rule if splitting causes serious architectural issues
+  - After any file modifications, run: dart format .
+
+SCREEN PARTS (MULTIPLE TABS/SECTIONS):
+  - If a screen has multiple distinct parts (e.g., tabs), create separate folders
+  - Naming: use _part/ or _widgets/ suffix
+  - Example structure:
+    home_screen/
+    ├── home_screen.dart              # Main screen container
+    ├── home_tab_screen.dart          # Tab 1 content
+    ├── service_tab_screen.dart       # Tab 2 content
+    ├── home_tab_widgets/             # Tab 1 specific widgets
+    │   └── home_card.dart
+    └── service_tab_widgets/          # Tab 2 specific widgets
+        └── service_card.dart
+
+  - Or using part-style naming:
+    home_screen/
+    ├── home_screen.dart
+    ├── home_tab_screen.dart
+    ├── service_tab_screen.dart
+    ├── home_tab_part/
+    │   └── home_card.dart
+    └── service_tab_part/
+        └── service_card.dart
+
+  - Rules for parts:
+    * Each part gets its own subfolder
+    * Part widgets are ONLY used by that specific part
+    * Shared widgets go in src/widgets/ instead
+    * Main screen file should be thin (just container/navigation)
+    * Part files should not exceed 150 lines each
+
+CODE FORMATTING:
+  - ALWAYS run dart format . after writing/editing code
+  - Check line count: find lib/ -name "*.dart" -exec wc -l {} + | sort -nr
+  - If file > 150 lines, consider splitting
+
+WIDGET COMPOSITION:
+  - Extract repeated UI into separate widget files
+  - Use widgets/ folder for feature-specific reusable components
+  - Keep build() methods clean and readable
+  - Maximum 3 levels of widget nesting in build() method
+
+
+20. CODE SPLITTING STRATEGY
+============================
+
+When a file exceeds 150 lines, split by responsibility:
+
+  1) Extract widgets into separate files
+     - Move complex build() sections to dedicated widget files
+     - Keep imports clean (no circular dependencies)
+
+  2) Extract logic into view_model
+     - Business logic should never be in widgets
+     - Use ViewModel for all state operations
+
+  3) Extract constants
+     - Move magic numbers/strings to const files
+     - Use theme extensions for colors/spacing
+
+  4) Use part files (sparingly)
+     - Only for closely related code (same class)
+     - Prefer separate files over part files
+
+Splitting Example:
+  Before (200 lines):
+    login_screen.dart (contains form + validation + submit logic)
+
+  After:
+    login_screen.dart (50 lines) - Main screen container
+    login_form.dart (80 lines) - Form widget
+    login_form_validators.dart (30 lines) - Validation logic
+
+
+21. FILE SIZE VERIFICATION
+===========================
+
+After writing code, verify:
+  1) Run: dart format .
+  2) Check line counts: find lib/ -name "*.dart" -exec wc -l {} + | sort -nr
+  3) Files > 150 lines need splitting
+  4) Run analyzer: dart analyze
+
+Command to check all files:
+  dart format --output=none --set-exit-if-changed .
+  find lib/ -name "*.dart" -exec wc -l {} + | sort -nr | head -20
+
+
+22. WIDGET EXTRACTION RULES
+=============================
+
+Extract a widget when:
+  - build() method exceeds 80 lines
+  - Same UI pattern appears 3+ times
+  - Widget needs its own state management
+  - Complex animations or gestures
+  - Feature-specific sub-components
+
+Naming conventions for extracted widgets:
+  - Parent: <feature>_screen.dart
+  - Parts: <feature>_<part>_screen.dart or <part>_widget.dart
+  - Components: <descriptive_name>.dart
+
+Example - Chat Feature:
+  chat_screen/
+  ├── chat_screen.dart              # Main chat screen
+  ├── chat_list_screen.dart         # Messages list part
+  ├── chat_input_screen.dart        # Input area part
+  ├── chat_list_widgets/
+  │   ├── message_bubble.dart
+  │   └── typing_indicator.dart
+  └── chat_input_widgets/
+      ├── attachment_button.dart
+      └── voice_recorder.dart

@@ -19,7 +19,7 @@ class ChangePasswordScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 "Old Password",
-                style: context.textStyle.headingMedium,
+                style: context.textStyle.headlineMedium,
               ),
             ),
             5.verticalSpace,
@@ -46,7 +46,7 @@ class ChangePasswordScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 "New Password",
-                style: context.textStyle.headingLarge,
+                style: context.textStyle.headlineLarge,
               ),
             ),
             5.verticalSpace,
@@ -73,7 +73,7 @@ class ChangePasswordScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 "Confirm Password",
-                style: context.textStyle.headingMedium,
+                style: context.textStyle.headlineMedium,
               ),
             ),
             5.verticalSpace,

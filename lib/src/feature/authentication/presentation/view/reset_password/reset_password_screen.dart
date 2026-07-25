@@ -21,7 +21,7 @@ class ResetPasswordScreen extends StatelessWidget {
           children: [
             Text(
               "Reset Password",
-              style: context.textStyle.headingLarge.copyWith(
+              style: context.textStyle.headlineMedium.copyWith(
                 color: context.color.primary,
               ),
             ),
@@ -62,7 +62,7 @@ class ResetPasswordScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 "Confirm Password",
-                style: context.textStyle.headingSmall,
+                style: context.textStyle.headlineMedium,
               ),
             ),
             5.verticalSpace,

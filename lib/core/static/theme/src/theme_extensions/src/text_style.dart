@@ -4,29 +4,83 @@ import 'package:google_fonts/google_fonts.dart';
 class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   const TextStyleExtension();
 
-  TextStyle get headingLarge {
+  TextStyle get displayLarge {
+    return GoogleFonts.poppins(
+      height: 1.20,
+      fontSize: 57,
+      letterSpacing: -0.25,
+      fontWeight: FontWeight.w400,
+    );
+  }
+
+  TextStyle get displayMedium {
+    return GoogleFonts.poppins(
+      height: 1.20,
+      fontSize: 45,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w400,
+    );
+  }
+
+  TextStyle get displaySmall {
+    return GoogleFonts.poppins(
+      height: 1.20,
+      fontSize: 36,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w400,
+    );
+  }
+
+  TextStyle get headlineLarge {
     return GoogleFonts.nunitoSans(
-      height: 1.40,
+      height: 1.25,
+      fontSize: 32,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w600,
+    );
+  }
+
+  TextStyle get headlineMedium {
+    return GoogleFonts.nunitoSans(
+      height: 1.30,
+      fontSize: 28,
+      letterSpacing: 0,
+      fontWeight: FontWeight.w600,
+    );
+  }
+
+  TextStyle get headlineSmall {
+    return GoogleFonts.nunitoSans(
+      height: 1.33,
       fontSize: 24,
       letterSpacing: 0,
       fontWeight: FontWeight.w600,
     );
   }
 
-  TextStyle get headingMedium {
+  TextStyle get titleLarge {
     return GoogleFonts.nunitoSans(
-      height: 1.40,
-      fontSize: 20,
+      height: 1.30,
+      fontSize: 22,
       letterSpacing: 0,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
     );
   }
 
-  TextStyle get headingSmall {
+  TextStyle get titleMedium {
     return GoogleFonts.nunitoSans(
-      height: 1.33,
-      fontSize: 18,
-      letterSpacing: 0,
+      height: 1.40,
+      fontSize: 16,
+      letterSpacing: 0.15,
+      fontWeight: FontWeight.w500,
+    );
+  }
+
+  TextStyle get titleSmall {
+    return GoogleFonts.nunitoSans(
+      height: 1.40,
+      fontSize: 14,
+      letterSpacing: 0.1,
       fontWeight: FontWeight.w500,
     );
   }
@@ -61,7 +115,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   TextStyle get labelLarge {
     return GoogleFonts.nunitoSans(
       height: 1.15,
-      fontSize: 16,
+      fontSize: 14,
       letterSpacing: 1,
       fontWeight: FontWeight.w500,
     );
@@ -70,7 +124,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   TextStyle get labelMedium {
     return GoogleFonts.nunitoSans(
       height: 1.15,
-      fontSize: 14,
+      fontSize: 12,
       letterSpacing: 1,
       fontWeight: FontWeight.w500,
     );
@@ -79,8 +133,8 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   TextStyle get labelSmall {
     return GoogleFonts.nunitoSans(
       height: 1.15,
-      fontSize: 12,
-      letterSpacing: 1,
+      fontSize: 11,
+      letterSpacing: 0.5,
       fontWeight: FontWeight.w500,
     );
   }
