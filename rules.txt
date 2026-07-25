@@ -1,0 +1,295 @@
+====================================
+PROJECT RULES
+====================================
+
+1. ARCHITECTURE OVERVIEW
+========================
+
+This Flutter app follows Clean Architecture with feature-based organization:
+
+  lib/
+  ├── main.dart                  # Entry point
+  ├── core/                      # Shared infrastructure (NOT feature-specific)
+  │   ├── const/                 # Static constants
+  │   ├── gen/                   # Generated code (flutter_gen, l10n)
+  │   ├── providers/             # Global Riverpod providers
+  │   ├── routes/                # go_router config
+  │   ├── service/               # Cache + Network services
+  │   └── static/                # Theme, extensions, utils
+  └── src/
+      ├── feature/               # Feature modules
+      │   └── <feature>/
+      │       ├── data/          # Models, Repository implementations
+      │       ├── domain/        # Abstract interfaces, Providers
+      │       └── presentation/  # View Models, Views
+      └── widgets/               # Shared reusable widgets
+
+
+2. FEATURE STRUCTURE (data/domain/presentation)
+================================================
+
+Each feature follows this exact pattern:
+
+  feature/
+  ├── data/
+  │   ├── model/                 # JSON models (json_serializable)
+  │   └── repository/            # Repository implementations (concrete)
+  ├── domain/
+  │   ├── repository/            # Abstract repository interfaces
+  │   └── provider/              # Riverpod providers for repositories
+  └── presentation/
+      ├── view_model/            # StateNotifier + providers
+      └── view/                  # Screen widgets
+
+KEY RULE: Dependencies flow inward only:
+  view -> view_model -> repository (interface) <- repository (impl) <- service
+  Views NEVER import from data/ directly. Always go through domain/.
+
+
+3. API CALL FLOW (with network)
+===============================
+
+Step-by-step for a feature that calls an API:
+
+  1) Define endpoint in core/service/network/endpoints.dart
+  2) Add Retrofit method in core/service/network/rest_client.dart
+  3) Run codegen: dart run build_runner build --delete-conflicting-outputs
+  4) Create model in feature/data/model/ with @JsonSerializable
+  5) Create abstract interface in feature/domain/repository/
+     - Method signature: Future<HttpResponse<dynamic>> methodName(Map<String, dynamic> request)
+  6) Create implementation in feature/data/repository/
+     - Takes RestClient as constructor param
+     - Delegates to _restClient.methodName(request)
+  7) Create provider in feature/domain/provider/
+     - Provider<MyRepository> that creates MyRepositoryImpl(RestClient(dio))
+     - Uses dioProvider from core/service/network/dio_client.dart
+  8) Create ViewModel in feature/presentation/view_model/
+     - Extends StateNotifier<AsyncValue<void>>
+     - Takes repository + cacheService as constructor params
+     - Uses Api.call() wrapper from core/service/network/api_handler.dart
+     - On success: extract and save data to cache if needed
+  9) Create Screen in feature/presentation/view/
+     - ConsumerStatefulWidget or ConsumerWidget
+     - Calls view model methods, watches state with ref.watch()
+     - Shows loading/error/data states via state.when()
+
+EXAMPLE (Authentication):
+
+  Screen (login_form.dart)
+    -> ref.read(loginViewModelProvider.notifier).login(LoginModel(...))
+      -> ViewModel calls Api.call(action: _authRepository.login(model.toJson()))
+        -> Api handler checks 200/201 status
+          -> Repository delegates to _restClient.login(request)
+            -> RestClient sends Dio POST to /auth/login
+              -> TokenManager interceptor injects Bearer token
+                -> HTTP request sent
+    <- Response flows back up
+    <- ViewModel saves tokens to CacheService
+    <- Screen shows toast success/error
+
+
+4. NON-API FLOW (cache/local only)
+===================================
+
+For features that only use local cache (no network):
+
+  1) CacheKey already defined in core/service/cache/cache_service.dart
+     (add new key here if needed)
+  2) Create abstract interface in feature/domain/repository/
+     - Methods return/accept primitive types, not HttpResponse
+  3) Create implementation in feature/data/repository/
+     - Takes CacheService as constructor param
+     - Reads/writes via _cacheService.get<T>(CacheKey.xxx) / .save()
+  4) Create provider in feature/domain/provider/
+     - Provider<MyRepository> that creates MyRepositoryImpl(cacheService)
+     - Uses cacheServiceProvider from core/service/cache/cache_service.dart
+  5) Create ViewModel in feature/presentation/view_model/
+     - Same pattern as API flow but calls repository directly
+     - No Api.call() wrapper needed
+  6) Create Screen in feature/presentation/view/
+
+EXAMPLE (Onboarding):
+
+  Screen (onboarding_screen.dart)
+    -> ref.read(onboardingViewModelProvider.notifier).completeOnboarding()
+      -> ViewModel calls _onboardingRepository.completeOnboarding()
+        -> Repository calls _cacheService.save(CacheKey.isOnBoardingCompleted, true)
+    <- Cache updated
+    <- Screen navigates to /login
+
+
+5. THEME SYSTEM
+===============
+
+Access theme anywhere via BuildContext extensions:
+
+  context.color.primary          # Brand color (#1B2A4A)
+  context.color.secondary        # Brand light (#5B7FDE)
+  context.color.onPrimary        # White
+  context.color.scaffoldBackground # Light gray (#F2F5F9)
+  context.color.disabled         # Muted (#806E61)
+  context.color.text.secondary   # Text secondary color
+  context.color.success/error/warning/info
+
+  context.textStyle.headingLarge # 24px/600 Nunito Sans
+  context.textStyle.headingMedium# 20px/600
+  context.textStyle.bodyLarge    # 16px/400
+  context.textStyle.bodyMedium   # 14px/400
+  context.textStyle.labelLarge   # 16px/500/ls1
+
+  context.spacing.s8             # Spacing values (s1 to s210)
+  context.padding.p16            # Padding values (p4 to p24)
+  context.margin.m6              # Margin values
+  context.radius.r12             # Border radius (r4 to r32)
+
+  context.lightTheme             # Full ThemeData for light mode
+  context.darkTheme              # Full ThemeData for dark mode
+  context.isTablet               # width > 600px
+
+IMPORTANT: When adding new theme extensions, register them in:
+  core/static/theme/src/theme_data.dart -> extensions: [...]
+
+
+6. ROUTING
+==========
+
+Route paths defined in: core/routes/route_const.dart
+Route config in: core/routes/route_config.dart (part of part_of.dart)
+
+To add a new route:
+  1) Add path constant to RouteConst class
+  2) Import the screen in part_of.dart
+  3) Add GoRoute in route_config.dart with buildTransitionPage()
+  4) Use context.go(RouteConst.xxx) for navigation
+
+Navigation methods:
+  context.go(path)          # Replace entire stack
+  context.push(path)        # Push onto stack
+  context.pop()             # Go back
+
+For bottom nav: use StatefulShellRoute.indexedStack branches
+
+
+7. CODE GENERATION
+==================
+
+Run after modifying these files:
+  - core/service/network/rest_client.dart (Retrofit)
+  - data/model/*.dart with @JsonSerializable (json_serializable)
+  - pubspec.yaml assets section (flutter_gen)
+
+Command:
+  dart run build_runner build --delete-conflicting-outputs
+
+Generated files:
+  - rest_client.g.dart (Retrofit API implementation)
+  - *.g.dart (JSON serialization)
+  - assets.gen.dart (type-safe asset access)
+
+
+8. SHARED WIDGETS (src/widgets/)
+================================
+
+Available reusable widgets:
+  - AppTextField         # Text input with debounce validation + shake
+  - AppDropdown<T>       # Generic dropdown with validation
+  - CustomLoadingIndicator # SpinKit three-bounce loader
+  - CustomToast          # Success/error/info/warning toasts
+  - CustomNetworkImage   # Cached network image with placeholder
+  - CustomDottedBorder   # Custom painted dotted border
+  - EmptyStateWidget     # Animated empty state (highly customizable)
+  - MultiSelectDropdown  # Multi-select checkbox dropdown
+  - MyRefreshIndicator   # Custom pull-to-refresh (4 styles)
+
+All use theme extensions for styling.
+
+
+9. SCREENUTIL
+=============
+
+Design size: 375 x 812 (iPhone X)
+
+Usage:
+  16.w    # Width-based scaling
+  16.h    # Height-based scaling
+  16.r    # Radius scaling
+  16.sp   # Font size scaling
+  16.verticalSpace  # SizedBox with height: 16.h
+  16.horizontalSpace # SizedBox with width: 16.w
+
+
+10. CACHE SERVICE
+=================
+
+Keys defined in: core/service/cache/cache_service.dart (CacheKey enum)
+
+Current keys:
+  - accessToken, refreshToken     # Auth tokens
+  - isOnBoardingCompleted         # Onboarding flag
+  - isLoggedIn                    # Login status
+  - rememberMe                    # Remember me preference
+  - role                          # User role
+  - language                      # Language preference
+
+Usage:
+  final cacheService = ref.read(cacheServiceProvider);
+  await cacheService.save(CacheKey.xxx, value);
+  final value = cacheService.get<T>(CacheKey.xxx);
+  await cacheService.remove([CacheKey.xxx]);
+  await cacheService.clear();
+
+
+11. NETWORKING
+==============
+
+Base URL: http://10.10.10.3:5000/api (hardcoded in endpoints.dart)
+
+Dio setup (dio_client.dart):
+  - 30s connect/receive timeout
+  - JSON content-type headers
+  - TokenManager interceptor (auto token injection + refresh)
+  - LogInterceptor in debug mode
+
+Token refresh flow (TokenManager):
+  - On 401: queues concurrent requests
+  - Calls GET /auth/refresh_token/ with refresh token
+  - Saves new access token
+  - Retries all queued requests
+  - On failure: clears tokens, navigates to /login
+
+
+12. COMMON PATTERNS
+===================
+
+Pattern: View Model State
+  - Always extends StateNotifier<AsyncValue<void>>
+  - States: loading, data(null), error
+  - Screen watches with: ref.watch(provider)
+  - Screen calls methods with: ref.read(provider.notifier).method()
+
+Pattern: UI State Providers
+  - Use StateProvider<T> for simple UI state (obscure text, selections)
+  - Use StateProvider.autoDispose for temporary form state
+
+Pattern: ConsumerWidget vs StatelessWidget
+  - ConsumerWidget: needs ref.read/ref.watch
+  - StatelessWidget: no Riverpod access needed
+  - ConsumerStatefulWidget: needs ref + StatefulWidget lifecycle
+
+Pattern: Import Paths
+  - From view to domain: import '../../domain/provider/xxx_provider.dart'
+  - From domain to data: import '../../data/repository/xxx_impl.dart'
+  - From data to core: import '../../../../../core/service/xxx.dart'
+
+
+13. GOTCHAS
+===========
+
+- Retrofit returns raw HttpResponse (unwrap with .data)
+- SharedPreferences initialized in main() and overridden in ProviderScope
+- Theme extensions MUST be registered in theme_data.dart or throws in debug
+- assets.gen.dart is generated - don't edit manually
+- rest_client.g.dart is generated - don't edit manually
+- SplashScreen reads onboarding status directly (no ViewModel) for speed
+- StatefulShellRoute requires GlobalObjectKey for bottom nav branches
+- Empty directories in features are intentional (placeholder for future code)
