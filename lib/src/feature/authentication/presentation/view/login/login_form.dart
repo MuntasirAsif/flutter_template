@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 
-import '../../../../../../core/static/extensions/localization_extension.dart';
 import '../../../../../../core/static/theme/src/theme_extensions/src/dimensions.dart';
 import '../../../../../../core/static/theme/theme.dart';
 import '../../../../../widgets/app_text_field.dart';
@@ -28,7 +27,7 @@ class SignInForm extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            context.s.email_or_phone_number,
+            'Email or Phone Number',
             style: context.textStyle.bodyLarge.copyWith(
               fontWeight: FontWeight.w600,
             ),
@@ -41,7 +40,7 @@ class SignInForm extends StatelessWidget {
               FormBuilderValidators.email(),
             ]),
             decoration: InputDecoration(
-              hintText: context.s.enter_your_email_or_phone_number,
+              hintText: 'Enter your email or phone number',
               prefixIcon: Container(
                 padding: EdgeInsets.all(const Dimensions().padding.p4.r),
                 margin: EdgeInsets.all(const Dimensions().padding.p8.r),
@@ -55,7 +54,7 @@ class SignInForm extends StatelessWidget {
           ),
           16.verticalSpace,
           Text(
-            context.s.password,
+            'Password',
             style: context.textStyle.bodyLarge.copyWith(
               fontWeight: FontWeight.w600,
             ),
@@ -79,7 +78,7 @@ class SignInForm extends StatelessWidget {
                 ),
                 controller: passwordController,
                 obscureText: obscureText,
-                hintText: context.s.enter_your_password,
+                hintText: 'Enter your password',
                 enableToggleObscure: true,
                 obscureIcon: const Icon(Icons.visibility_off),
                 obscureIconOff: const Icon(Icons.visibility),
@@ -104,12 +103,12 @@ class SignInForm extends StatelessWidget {
                   );
                 },
               ),
-              Text(context.s.remember_me, style: context.textStyle.bodyMedium),
+              Text('Remember me', style: context.textStyle.bodyMedium),
               const Spacer(),
               GestureDetector(
                 onTap: () {},
                 child: Text(
-                  context.s.forgot_password,
+                  'Forgot password?',
                   style: context.textStyle.bodyMedium.copyWith(
                     color: context.color.primary,
                   ),
@@ -156,13 +155,13 @@ class SignInForm extends StatelessWidget {
                   },
                   child: state.when(
                     data: (data) {
-                      return Text(context.s.sign_in);
+                      return Text('Sign In');
                     },
                     loading: () {
                       return const CustomLoadingIndicator();
                     },
                     error: (Object error, StackTrace stackTrace) {
-                      return Text(context.s.sign_in);
+                      return Text('Sign In');
                     },
                   ),
                 ),

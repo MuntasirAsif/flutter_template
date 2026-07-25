@@ -5,8 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'core/gen/l10n/app_localizations.dart';
-import 'core/providers/language_provider.dart';
 import 'core/routes/part_of.dart';
 import 'core/service/cache/cache_service.dart';
 import 'core/static/theme/theme.dart';
@@ -42,7 +40,6 @@ class MyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
-    final locale = ref.watch(languageProvider);
 
     return ScreenUtilInit(
       designSize: const Size(375, 812),
@@ -51,9 +48,6 @@ class MyApp extends ConsumerWidget {
       builder: (context, child) {
         return MaterialApp.router(
           title: 'App Name',
-          locale: locale,
-          supportedLocales: S.supportedLocales,
-          localizationsDelegates: S.localizationsDelegates,
           debugShowCheckedModeBanner: false,
           theme: context.lightTheme,
           darkTheme: context.darkTheme,

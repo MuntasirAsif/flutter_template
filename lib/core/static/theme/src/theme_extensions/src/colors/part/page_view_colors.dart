@@ -14,7 +14,7 @@ class _LightPageViewColors extends PageViewColors {
   Color get active => _Primitive.brand;
 
   @override
-  Color get inactive => _Primitive.neutral20;
+  Color get inactive => _Primitive.muted;
 }
 
 class _DarkPageViewColors extends PageViewColors {
@@ -24,5 +24,5 @@ class _DarkPageViewColors extends PageViewColors {
   Color get active => _Primitive.brand;
 
   @override
-  Color get inactive => _Primitive.neutral20;
+  Color get inactive => _Primitive.muted;
 }

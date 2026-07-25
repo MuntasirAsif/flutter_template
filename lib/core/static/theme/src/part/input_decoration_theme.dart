@@ -8,7 +8,7 @@ class _InputDecorationLightTheme with ThemeExtensions {
 
     return InputDecorationTheme(
       hintStyle: textStyle.bodyLarge.copyWith(color: lightColor.text.secondary),
-      filled: true,
+      filled: false,
       fillColor: lightColor.textFieldFillColor,
       contentPadding: EdgeInsets.symmetric(
         vertical: dimensions.spacing.s12,
@@ -18,8 +18,8 @@ class _InputDecorationLightTheme with ThemeExtensions {
       enabledBorder: OutlineInputBorder(
         borderRadius: borderRadius,
         borderSide: BorderSide(
-          color: lightColor.textFieldBorderColor,
-          width: dimensions.spacing.s2,
+          color: lightColor.textFieldBorderColor.withValues(alpha: 0.3),
+          width: dimensions.spacing.s1,
         ),
       ),
       focusedBorder: OutlineInputBorder(

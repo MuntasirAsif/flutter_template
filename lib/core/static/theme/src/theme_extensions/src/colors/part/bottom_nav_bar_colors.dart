@@ -14,7 +14,7 @@ class _LightBottomNavBarColors extends BottomNavBarColors {
   Color get selectedItem => _Primitive.brand;
 
   @override
-  Color get unselectedItem => _Primitive.neutral20;
+  Color get unselectedItem => _Primitive.muted;
 }
 
 class _DarkBottomNavBarColors extends BottomNavBarColors {
@@ -24,5 +24,5 @@ class _DarkBottomNavBarColors extends BottomNavBarColors {
   Color get selectedItem => _Primitive.brand;
 
   @override
-  Color get unselectedItem => _Primitive.neutral20;
+  Color get unselectedItem => _Primitive.muted;
 }

@@ -38,7 +38,7 @@ List<StatefulShellBranch> bottomBranches = [
     routes: [
       GoRoute(
         path: RouteConst.homeScreen,
-        builder: (context, state) => const HomeScreen(),
+        builder: (context, state) => Scaffold(),
       ),
     ],
   ),

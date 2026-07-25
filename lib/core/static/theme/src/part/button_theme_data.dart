@@ -60,13 +60,14 @@ class _ElevatedButtonLightThemeData with ThemeExtensions {
   ElevatedButtonThemeData call() {
     return ElevatedButtonThemeData(
       style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all(Colors.transparent),
         elevation: WidgetStateProperty.all(0),
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(const Dimensions().radius.r12),
             side: BorderSide(
               color: lightColor.primary,
-              width: dimensions.spacing.s2,
+              width: dimensions.spacing.s1,
             ),
           ),
         ),
@@ -77,7 +78,7 @@ class _ElevatedButtonLightThemeData with ThemeExtensions {
           Size(double.infinity, dimensions.spacing.s48),
         ),
         textStyle: WidgetStateProperty.all(
-          const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         ),
       ),
     );

@@ -35,7 +35,7 @@ class ResetPasswordScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 "New Password",
-                style: context.textStyle.headingSmall,
+                style: context.textStyle.labelLarge,
               ),
             ),
             5.verticalSpace,

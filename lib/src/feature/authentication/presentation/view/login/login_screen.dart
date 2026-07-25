@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../core/static/extensions/localization_extension.dart';
 import '../../../../../../core/static/theme/theme.dart';
 import 'login_form.dart';
 
@@ -29,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                     10.verticalSpace,
                     Center(
                       child: Text(
-                        context.s.sign_in,
+                        'Sign In',
                         style: context.textStyle.headingLarge.copyWith(
                           color: context.color.primary,
                         ),
@@ -38,7 +37,7 @@ class LoginScreen extends StatelessWidget {
                     8.verticalSpace,
                     Center(
                       child: Text(
-                        context.s.log_in_to_your_account,
+                        'Log in to your account',
                         style: context.textStyle.bodyMedium,
                       ),
                     ),
@@ -51,14 +50,14 @@ class LoginScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          context.s.don_t_have_an_account,
+                          "Don't have an account?",
                           style: context.textStyle.bodyMedium,
                         ),
                         GestureDetector(
                           onTap: () {
                           },
                           child: Text(
-                            context.s.create_account,
+                            'Create account',
                             style: context.textStyle.bodyMedium.copyWith(
                               color: context.color.primary,
                               decoration: TextDecoration.underline,
@@ -71,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                     20.verticalSpace,
                     Center(
                       child: Text(
-                        context.s.or,
+                        'or',
                         style: context.textStyle.bodyMedium,
                       ),
                     ),

@@ -5,7 +5,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   const TextStyleExtension();
 
   TextStyle get headingLarge {
-    return GoogleFonts.poppins(
+    return GoogleFonts.nunitoSans(
       height: 1.40,
       fontSize: 24,
       letterSpacing: 0,
@@ -14,7 +14,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   }
 
   TextStyle get headingMedium {
-    return GoogleFonts.poppins(
+    return GoogleFonts.nunitoSans(
       height: 1.40,
       fontSize: 20,
       letterSpacing: 0,
@@ -23,7 +23,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   }
 
   TextStyle get headingSmall {
-    return GoogleFonts.poppins(
+    return GoogleFonts.nunitoSans(
       height: 1.33,
       fontSize: 18,
       letterSpacing: 0,
@@ -32,7 +32,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   }
 
   TextStyle get bodyLarge {
-    return GoogleFonts.poppins(
+    return GoogleFonts.nunitoSans(
       height: 1.50,
       fontSize: 16,
       letterSpacing: 0,
@@ -41,7 +41,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   }
 
   TextStyle get bodyMedium {
-    return GoogleFonts.poppins(
+    return GoogleFonts.nunitoSans(
       height: 1.42,
       fontSize: 14,
       letterSpacing: 0,
@@ -50,7 +50,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   }
 
   TextStyle get bodySmall {
-    return GoogleFonts.poppins(
+    return GoogleFonts.nunitoSans(
       height: 1.42,
       fontSize: 12,
       letterSpacing: 0,
@@ -59,7 +59,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   }
 
   TextStyle get labelLarge {
-    return GoogleFonts.poppins(
+    return GoogleFonts.nunitoSans(
       height: 1.15,
       fontSize: 16,
       letterSpacing: 1,
@@ -68,7 +68,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   }
 
   TextStyle get labelMedium {
-    return GoogleFonts.poppins(
+    return GoogleFonts.nunitoSans(
       height: 1.15,
       fontSize: 14,
       letterSpacing: 1,
@@ -77,7 +77,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   }
 
   TextStyle get labelSmall {
-    return GoogleFonts.poppins(
+    return GoogleFonts.nunitoSans(
       height: 1.15,
       fontSize: 12,
       letterSpacing: 1,
