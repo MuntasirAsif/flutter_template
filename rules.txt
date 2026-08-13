@@ -161,45 +161,94 @@ Step-by-step for a feature that calls an API:
 
   8) Create ViewModel in feature/presentation/view_model/
      - Extends StateNotifier<AsyncValue<void>>
-     - Takes repository + cacheService as constructor params
+     - Takes repository + cacheService (+ ref if needed) as constructor params
      - Uses Api.call() wrapper from core/service/network/api_handler.dart
-     - On success: extract and save data to cache if needed
+     - Api.call(action:, onSuccess:, onError:) uses callbacks, NOT AsyncValue.guard
+     - onSuccess(T response): extract and save data to cache, then set state
+     - onError(String error): set error state
      - Example:
        class LoginViewModel extends StateNotifier<AsyncValue<void>> {
          final AuthRepository _authRepository;
          final CacheService _cacheService;
+         final Ref ref;
 
-         LoginViewModel(this._authRepository, this._cacheService)
+         LoginViewModel(this._authRepository, this._cacheService, this.ref)
              : super(const AsyncValue.data(null));
 
-         Future<void> login(LoginModel model) async {
+         Future<void> login(LoginModel model, {bool rememberMe = false}) async {
            state = const AsyncValue.loading();
-           state = await AsyncValue.guard(() async {
-             final response = await Api.call(
-               action: _authRepository.login(model.toJson()),
-             );
-             // Extract and save tokens
-             final data = response.data;
-             await _cacheService.save(CacheKey.accessToken, data['access_token']);
-           });
+           await Api.call(
+             action: _authRepository.login(model.toJson()),
+             onSuccess: (responseData) async {
+               if (responseData != null && responseData is Map<String, dynamic>) {
+                 final accessToken = responseData['accessToken']?.toString();
+                 final refreshToken = responseData['refreshToken']?.toString();
+                 final role = responseData['data']?['user']?['role']?.toString();
+                 if (accessToken != null) {
+                   await _cacheService.save(CacheKey.accessToken, accessToken);
+                 }
+                 if (refreshToken != null) {
+                   await _cacheService.save(CacheKey.refreshToken, refreshToken);
+                 }
+                 await _cacheService.save(CacheKey.isLoggedIn, true);
+                 await _cacheService.save(CacheKey.rememberMe, rememberMe);
+                 await _cacheService.save(CacheKey.role, role);
+               }
+               state = const AsyncValue.data(null);
+             },
+             onError: (error) {
+               state = AsyncValue.error(error, StackTrace.current);
+             },
+           );
          }
        }
 
   9) Create Screen in feature/presentation/view/
-     - ConsumerStatefulWidget or ConsumerWidget
-     - Calls view model methods, watches state with ref.watch()
-     - Shows loading/error/data states via state.when()
+     - Use a subfolder per screen: view/<screen_name>/<screen_name>_screen.dart
+     - Main screen is a thin container (StatelessWidget is fine - no state needed)
+     - Form and sub-widgets live in separate files under the same subfolder
+     - Only widgets that need Riverpod state use ref.watch()/ref.read()
+     - Example structure:
+       login/
+       ├── login_screen.dart          # Thin container (StatelessWidget)
+       ├── login_form.dart            # Form (ConsumerWidget) - controllers + validation
+       └── widgets/                   # Sub-widgets
+           └── sign_in_button.dart    # Button (ConsumerWidget) - watches view model state
      - Example:
-       class LoginScreen extends ConsumerWidget {
+       class LoginScreen extends StatelessWidget {
+         const LoginScreen({super.key});
+         @override
+         Widget build(BuildContext context) {
+           return Scaffold(
+             body: SafeArea(
+               child: Center(
+                 child: SingleChildScrollView(
+                   child: Column(
+                     children: [
+                       const SignInForm(),
+                       Row(children: ['Don't have an account?', 'Create account']),
+                     ],
+                   ),
+                 ),
+               ),
+             ),
+           );
+         }
+       }
+     - Form example (ConsumerWidget):
+       class SignInForm extends ConsumerWidget {
          @override
          Widget build(BuildContext context, WidgetRef ref) {
-           final state = ref.watch(loginViewModelProvider);
-
-           return Scaffold(
-             body: state.when(
-               loading: () => const CircularProgressIndicator(),
-               error: (e, st) => Text('Error: $e'),
-               data: (_) => LoginForm(),
+           final emailController = TextEditingController();
+           final passwordController = TextEditingController();
+           final formKey = GlobalKey<FormState>();
+           return Form(
+             key: formKey,
+             child: Column(
+               children: [
+                 AppTextField(controller: emailController, ...),
+                 SignInButton(onPressed: () { context.push(RouteConst.homeScreen); }),
+               ],
              ),
            );
          }
@@ -540,9 +589,14 @@ Token refresh flow (TokenManager):
 
 Api.call() wrapper (api_handler.dart):
   - Handles loading/error states
-  - Checks response status (200/201 = success)
-  - Returns HttpResponse with parsed data
-  - Usage: final response = await Api.call(action: repository.method());
+  - Signature: Api.call<T>({action:, onSuccess:, onError:})
+  - Checks response status (200/201 = success) → calls onSuccess(result.data)
+  - Non-200/201 or DioException with message → calls onError(message)
+  - Usage: await Api.call(
+      action: repository.method(),
+      onSuccess: (responseData) async { ... },
+      onError: (error) { ... },
+    );
 
 
 12. COMMON PATTERNS
@@ -553,7 +607,8 @@ Pattern: View Model State
   - States: loading, data(null), error
   - Screen watches with: ref.watch(provider)
   - Screen calls methods with: ref.read(provider.notifier).method()
-  - Use AsyncValue.guard() for try-catch
+  - Use Api.call(action:, onSuccess:, onError:) for API calls (NOT AsyncValue.guard)
+  - UI state providers (obscure text, remember me) use StateProvider.autoDispose
 
 Pattern: UI State Providers
   - Use StateProvider<T> for simple UI state (obscure text, selections)
@@ -737,6 +792,14 @@ CODE CLEANLINESS:
   - Avoid magic numbers - use constants
   - Remove unused imports and code
   - Keep methods focused on single responsibility
+
+WIDGETS:
+  - MUST use AppTextField for ALL text input fields (never raw TextField)
+  - AppTextField provides debounce validation + shake animation + obscure toggle
+  - Props: controller (required), validator, hintText, label, obscureText,
+    enableInvalidShake, enableToggleObscure, keyboardType, onChanged, onSubmitted
+  - Combine validators with FormBuilderValidators.compose(...)
+  - Use StateProvider.autoDispose for toggles (obscure text, remember me)
 
 FILE ORGANIZATION:
   - ViewModels/Controllers: feature/feature_name/presentation/view_model/

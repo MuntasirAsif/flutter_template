@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../../../core/routes/route_const.dart';
 import '../../../../../../core/static/theme/theme.dart';
-import '../../../../../widgets/custom_toast.dart';
-import '../../../data/model/login_model.dart';
+import '../../../../../widgets/app_text_field.dart';
 import '../../view_model/login_view_model.dart';
-import 'widgets/login_form_fields.dart';
 import 'widgets/sign_in_button.dart';
 
 class SignInForm extends ConsumerWidget {
@@ -24,8 +25,24 @@ class SignInForm extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          EmailField(controller: emailController),
-          PasswordField(controller: passwordController),
+          AppTextField(
+            controller: emailController,
+            label: 'Email',
+            hintText: 'Enter your email',
+            obscureText: false,
+            enableInvalidShake: true,
+            validator: FormBuilderValidators.compose([
+              FormBuilderValidators.required(),
+              FormBuilderValidators.email(),
+            ]),
+          ),
+          AppTextField(
+            controller: passwordController,
+            label: 'Password',
+            hintText: 'Enter your password',
+            obscureText: true,
+            enableInvalidShake: true,
+          ),
           5.verticalSpace,
           Row(
             children: [
@@ -55,35 +72,8 @@ class SignInForm extends ConsumerWidget {
           ),
           20.verticalSpace,
           SignInButton(
-            onPressed: () async {
-              if (formKey.currentState!.validate()) {
-                await ref
-                    .read(loginViewModelProvider.notifier)
-                    .login(
-                      LoginModel(
-                        email: emailController.text.trim(),
-                        password: passwordController.text,
-                      ),
-                      rememberMe: ref.read(loginRememberMeProvider),
-                    );
-
-                if (!context.mounted) return;
-
-                final loginState = ref.read(loginViewModelProvider);
-                if (loginState.hasError) {
-                  CustomToast.showError(
-                    context,
-                    title: 'Error',
-                    description: loginState.error.toString(),
-                  );
-                } else {
-                  CustomToast.showSuccess(
-                    context,
-                    title: 'Success',
-                    description: 'Login successfully!',
-                  );
-                }
-              }
+            onPressed: () {
+              context.push(RouteConst.homeScreen);
             },
           ),
           20.verticalSpace,
