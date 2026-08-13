@@ -15,16 +15,14 @@ class LoginScreen extends StatelessWidget {
           child: ConstrainedBox(
             constraints: BoxConstraints(maxWidth: 600.w),
             child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: context.padding.p16.r,
-              ),
+              padding: EdgeInsets.symmetric(horizontal: context.padding.p16.r),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     50.verticalSpace,
-                    
+
                     10.verticalSpace,
                     Center(
                       child: Text(
@@ -54,8 +52,7 @@ class LoginScreen extends StatelessWidget {
                           style: context.textStyle.bodyMedium,
                         ),
                         GestureDetector(
-                          onTap: () {
-                          },
+                          onTap: () {},
                           child: Text(
                             'Create account',
                             style: context.textStyle.bodyMedium.copyWith(
@@ -69,14 +66,11 @@ class LoginScreen extends StatelessWidget {
                     ),
                     20.verticalSpace,
                     Center(
-                      child: Text(
-                        'or',
-                        style: context.textStyle.bodyMedium,
-                      ),
+                      child: Text('or', style: context.textStyle.bodyMedium),
                     ),
                     20.verticalSpace,
+
                     // google sign in button
-                    
                   ],
                 ),
               ),

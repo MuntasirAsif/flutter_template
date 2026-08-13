@@ -8,7 +8,7 @@ class OnboardingViewModel extends StateNotifier<AsyncValue<void>> {
   final OnboardingRepository _onboardingRepository;
 
   OnboardingViewModel(this._onboardingRepository)
-      : super(const AsyncValue.data(null));
+    : super(const AsyncValue.data(null));
 
   Future<void> completeOnboarding() async {
     state = const AsyncValue.loading();
@@ -28,8 +28,8 @@ class OnboardingViewModel extends StateNotifier<AsyncValue<void>> {
 
 final onboardingViewModelProvider =
     StateNotifierProvider<OnboardingViewModel, AsyncValue<void>>((ref) {
-  final onboardingRepository = ref.watch(onboardingRepositoryProvider);
-  return OnboardingViewModel(onboardingRepository);
-});
+      final onboardingRepository = ref.watch(onboardingRepositoryProvider);
+      return OnboardingViewModel(onboardingRepository);
+    });
 
 final onboardingCurrentPageProvider = StateProvider<int>((ref) => 0);

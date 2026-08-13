@@ -40,7 +40,8 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
     if (!mounted) return;
 
     final onboardingRepository = ref.read(onboardingRepositoryProvider);
-    final isOnboardingCompleted = await onboardingRepository.isOnboardingCompleted();
+    final isOnboardingCompleted = await onboardingRepository
+        .isOnboardingCompleted();
 
     if (!mounted) return;
 
@@ -71,10 +72,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
           Center(
             child: FadeTransition(
               opacity: _fadeIn,
-              child: Assets.images.appIcon.image(
-                width: 120.w,
-                height: 120.w,
-              ),
+              child: Assets.images.appIcon.image(width: 120.w, height: 120.w),
             ),
           ),
         ],

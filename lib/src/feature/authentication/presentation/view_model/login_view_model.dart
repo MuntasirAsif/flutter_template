@@ -9,11 +9,10 @@ import '../../data/model/login_model.dart';
 import '../../domain/repository/auth_repository.dart';
 import '../../domain/provider/auth_repository_provider.dart';
 
-
 class LoginViewModel extends StateNotifier<AsyncValue<void>> {
   final AuthRepository _authRepository;
   final CacheService _cacheService;
-  final ref;
+  final Ref ref;
 
   LoginViewModel(this._authRepository, this._cacheService, this.ref)
     : super(const AsyncValue.data(null));

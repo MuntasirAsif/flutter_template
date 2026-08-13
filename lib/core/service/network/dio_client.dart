@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import '../../providers/navigator_key_provider.dart' show navigatorKeyProvider;
 import '../cache/cache_service.dart';
@@ -30,9 +31,12 @@ class DioClient {
         dio: dio,
       ),
       if (kDebugMode)
-        LogInterceptor(
+        PrettyDioLogger(
           requestBody: true,
+          requestHeader: true,
           responseBody: true,
+          responseHeader: false,
+          compact: false,
         ),
     ]);
 
