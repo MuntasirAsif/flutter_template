@@ -15,18 +15,24 @@ class _Primitive {
   static const Color textFieldFillColor = Color(0xFFFDF8F8);
 
   /// textFieldBorderColor
-  static const Color textFieldBorderColor = Color(0xFF111528);
+  static const Color textFieldBorderColor = Color(0xFFE1E5EB);
 
   /// textFieldFocusBorderColor
-  static const Color textFieldFocusBorderColor = Color(0xFFFD6900);
+  static const Color textFieldFocusBorderColor = Color(0xFF1D2944);
 
   // -------- Element colors --------
 
   /// surface, onPrimary, white
-  static const Color surface = Color(0xFFFFFFFF);
+  static const Color surface = Color(0xFFF6F9FF);
 
-  /// muted, border, disabled, textSecondary
+  /// muted
   static const Color muted = Color(0xFF806E61);
+
+  /// border
+  static const Color border = Color(0xFFE1E5EB);
+
+  /// disabled
+  static const Color disabled = Color(0xFFE1E5EB);
 
   /// inactive, borderDark
   static const Color inactive = Color(0xFFD5DCE4);
@@ -39,6 +45,9 @@ class _Primitive {
 
   /// textPrimary
   static const Color textPrimary = Color(0xFF291506);
+
+  /// textSecondary
+  static const Color textSecondary = Color(0xFF75757C);
 
   /// darkSurface, scaffoldBackgroundDark
   static const Color darkSurface = Color(0xFF1B1B1B);

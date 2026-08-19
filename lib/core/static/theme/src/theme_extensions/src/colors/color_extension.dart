@@ -52,7 +52,7 @@ class ColorExtension {
 class LightColorExtension extends ThemeExtension<LightColorExtension>
     implements ColorExtension {
   const LightColorExtension({
-    this.border = _Primitive.muted,
+    this.border = _Primitive.border,
     this.icon = _Primitive.icon,
     this.onPrimary = _Primitive.surface,
     this.primary = _Primitive.brand,
@@ -61,7 +61,7 @@ class LightColorExtension extends ThemeExtension<LightColorExtension>
     this.error = _Primitive.error,
     this.warning = _Primitive.warning,
     this.info = _Primitive.info,
-    this.disabled = _Primitive.muted,
+    this.disabled = _Primitive.disabled,
     this.active = _Primitive.brand,
     this.inactive = _Primitive.inactive,
     this.appBar = const _LightAppBarColors(),
@@ -249,7 +249,7 @@ class DarkColorExtension extends ThemeExtension<DarkColorExtension>
     this.error = _Primitive.error,
     this.warning = _Primitive.warning,
     this.info = _Primitive.info,
-    this.disabled = _Primitive.muted,
+    this.disabled = _Primitive.disabled,
     this.active = _Primitive.brand,
     this.inactive = _Primitive.inactive,
     this.appBar = const _DarkAppBarColors(),

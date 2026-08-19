@@ -70,7 +70,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   TextStyle get titleMedium {
     return GoogleFonts.nunitoSans(
       height: 1.40,
-      fontSize: 16,
+      fontSize: 18,
       letterSpacing: 0.15,
       fontWeight: FontWeight.w500,
     );
@@ -79,7 +79,7 @@ class TextStyleExtension extends ThemeExtension<TextStyleExtension> {
   TextStyle get titleSmall {
     return GoogleFonts.nunitoSans(
       height: 1.40,
-      fontSize: 14,
+      fontSize: 16,
       letterSpacing: 0.1,
       fontWeight: FontWeight.w500,
     );

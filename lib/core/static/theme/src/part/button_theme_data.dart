@@ -95,7 +95,7 @@ class _ElevatedButtonDarkThemeData with ThemeExtensions {
           StadiumBorder(
             side: BorderSide(
               color: darkColor.primary,
-              width: dimensions.spacing.s2,
+              width: dimensions.spacing.s1,
             ),
           ),
         ),

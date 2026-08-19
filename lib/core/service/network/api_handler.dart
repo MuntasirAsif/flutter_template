@@ -23,6 +23,10 @@ class Api {
           await onError(data['message'].toString());
           return;
         }
+        if (data is Map<String, dynamic> && data['error'] != null) {
+          await onError(data['error'].toString());
+          return;
+        }
       }
       // Provide a more generic fallback or exactly as thrown
       await onError(e.toString());

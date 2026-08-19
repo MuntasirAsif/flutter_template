@@ -44,12 +44,22 @@ class TokenManager extends Interceptor {
       await _handleUnauthorizedError(err, handler);
       return;
     }
-
     handler.next(err);
   }
 
   bool _shouldHandleError(int? statusCode, RequestOptions options) {
-    return statusCode == 401 && options.extra['retry'] != true;
+    return statusCode == 401 &&
+        !options.extra.containsKey('retry') &&
+        !_isAuthEndpoint(options);
+  }
+
+  bool _isAuthEndpoint(RequestOptions options) {
+    final path = options.path;
+    return path.contains('/auth/login') ||
+        path.contains('/auth/register') ||
+        path.contains('/auth/forgot-password') ||
+        path.contains('/auth/verify-otp') ||
+        path.contains('/auth/refresh_token');
   }
 
   Future<void> _handleUnauthorizedError(
@@ -88,8 +98,8 @@ class TokenManager extends Interceptor {
       RequestOptions(
         baseUrl: baseUrl,
         path: refreshTokenEndpoint,
-        method: 'GET',
-        headers: {'Authorization': 'Bearer $refreshToken'},
+        method: 'POST',
+        data: {'refreshToken': refreshToken},
       ),
     );
 
@@ -102,8 +112,25 @@ class TokenManager extends Interceptor {
       );
     }
 
-    final newToken = refreshResp.data['data']['accessToken'] as String;
+    final data = refreshResp.data;
+    final newToken = data is Map<String, dynamic>
+        ? data['accessToken']?.toString()
+        : null;
+    final newRefreshToken = data is Map<String, dynamic>
+        ? data['refreshToken']?.toString()
+        : null;
+
+    if (newToken == null) {
+      throw DioException(
+        requestOptions: RequestOptions(),
+        error: 'No access token returned by refresh endpoint',
+      );
+    }
+
     await saveToken(CacheKey.accessToken, newToken);
+    if (newRefreshToken != null) {
+      await saveToken(CacheKey.refreshToken, newRefreshToken);
+    }
 
     return newToken;
   }
@@ -148,8 +175,9 @@ class TokenManager extends Interceptor {
   }
 
   void _navigateToLoginScreen() {
-    if (navigatorKey.currentState?.mounted == true) {
-      navigatorKey.currentState?.context.goNamed(RouteConst.login, extra: true);
+    final context = navigatorKey.currentContext;
+    if (context != null) {
+      context.go(RouteConst.login);
     }
   }
 

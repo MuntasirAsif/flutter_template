@@ -18,7 +18,7 @@ class _InputDecorationLightTheme with ThemeExtensions {
       enabledBorder: OutlineInputBorder(
         borderRadius: borderRadius,
         borderSide: BorderSide(
-          color: lightColor.textFieldBorderColor.withValues(alpha: 0.3),
+          color: lightColor.textFieldBorderColor,
           width: dimensions.spacing.s1,
         ),
       ),
@@ -26,20 +26,6 @@ class _InputDecorationLightTheme with ThemeExtensions {
         borderRadius: borderRadius,
         borderSide: BorderSide(
           color: lightColor.textFieldFocusBorderColor,
-          width: dimensions.spacing.s1,
-        ),
-      ),
-      errorBorder: OutlineInputBorder(
-        borderRadius: borderRadius,
-        borderSide: BorderSide(
-          color: lightColor.error,
-          width: dimensions.spacing.s1,
-        ),
-      ),
-      focusedErrorBorder: OutlineInputBorder(
-        borderRadius: borderRadius,
-        borderSide: BorderSide(
-          color: lightColor.error,
           width: dimensions.spacing.s1,
         ),
       ),
@@ -78,28 +64,6 @@ class _InputDecorationDarkTheme with ThemeExtensions {
           width: dimensions.spacing.s1,
         ),
       ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: borderRadius,
-        borderSide: BorderSide(
-          color: darkColor.textFieldFocusBorderColor,
-          width: dimensions.spacing.s1,
-        ),
-      ),
-      errorBorder: OutlineInputBorder(
-        borderRadius: borderRadius,
-        borderSide: BorderSide(
-          color: darkColor.error,
-          width: dimensions.spacing.s1,
-        ),
-      ),
-      focusedErrorBorder: OutlineInputBorder(
-        borderRadius: borderRadius,
-        borderSide: BorderSide(
-          color: darkColor.error,
-          width: dimensions.spacing.s1,
-        ),
-      ),
-
       suffixIconColor: darkColor.icon,
       disabledBorder: OutlineInputBorder(borderRadius: borderRadius),
     );
