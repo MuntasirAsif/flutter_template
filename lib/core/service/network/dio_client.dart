@@ -32,11 +32,14 @@ class DioClient {
       ),
       if (kDebugMode)
         PrettyDioLogger(
-          requestBody: true,
           requestHeader: true,
-          responseBody: true,
+          requestBody: true,
           responseHeader: false,
-          compact: false,
+          responseBody: true,
+          compact: true,
+          maxWidth: 90,
+          error: true,
+          enabled: kDebugMode,
         ),
     ]);
 

@@ -18,4 +18,7 @@ abstract class RestClient {
 
   @POST(Endpoints.forgotPassword)
   Future<HttpResponse> forgotPassword(@Body() Map<String, dynamic> request);
+
+  @POST(Endpoints.verifyOtp)
+  Future<HttpResponse> verifyOtp(@Body() Map<String, dynamic> request);
 }
